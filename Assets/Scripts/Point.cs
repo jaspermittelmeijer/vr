@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class Point
 {
@@ -12,6 +14,9 @@ public class Point
 	static int match;
 	private int[] triangleReference;
 	private Vector3[] verticeReference;
+
+	private float PI = Mathf.PI ;
+
 
 	public Point (int _index, int[] _triangleReference, Vector3[] _verticeReference)
 	{
@@ -129,6 +134,45 @@ public class Point
 		
 	}
 
+	public float getFov2 (int nMax)
+	{
+
+		// Set up a dictionary: we use our float angle as the key, and the point that concerns as the value.
+
+		var dictionary = new Dictionary<float, int> ();
+//		dictionary.Add (10.0f, 2);
+//		dictionary.Add (5.0f, 3);
+
+
+		Vector2 thisPoint = new Vector2 (verticeReference [index].x, verticeReference [index].z);
+
+		// Loop through all points
+		for (int i=0; i<nMax; i++) {
+			// Except the intended point itself
+			if (i != index) {
+				Vector2 thePoint = new Vector2 (verticeReference [i].x, verticeReference [i].z);
+				Vector2 cast = thePoint - thisPoint;
+				float angle = Mathf.Atan2 (cast.y, cast.x);
+
+				dictionary.Add (angle, i);
+			}
+
+		}
+
+		// Acquire keys (the angles) and sort them
+		var list = dictionary.Keys.ToList ();
+		list.Sort ();
+
+		// Loop through keys.
+		foreach (var key in list) {
+			Debug.Log (" "+key +" "+dictionary [key]);
+		}
+
+
+		return 0.0f;
+
+	}
+
 	public float getFov (int nMax)
 	{
 		
@@ -178,7 +222,8 @@ public class Point
 		
 	}
 
-	public float distanceTo (int passedIndex) {
+	public float distanceTo (int passedIndex)
+	{
 	
 		float distance = (new Vector2 (verticeReference [passedIndex].x, verticeReference [passedIndex].z) - new Vector2 (verticeReference [index].x, verticeReference [index].z)).magnitude;
 
@@ -187,7 +232,6 @@ public class Point
 
 
 	}
-
 
 	public int[] findEdges (int nMax, int tMax)
 	{
@@ -209,8 +253,8 @@ public class Point
 			int indexOfPoint = Array.FindIndex<int> (triangleReference, j, testMatch);
 			int indexOfTriangle = indexOfPoint / 3;
 
-			if (indexOfTriangle *3 >= tMax){
-				Debug.Log("Triangle out of range, aborting");
+			if (indexOfTriangle * 3 >= tMax) {
+				Debug.Log ("Triangle out of range, aborting");
 				break;
 			}
 		
@@ -225,11 +269,11 @@ public class Point
 
 					Point connectedPoint = new Point (c, triangleReference, verticeReference);
 					if (connectedPoint.getFov (nMax) < 180.0f) {
-						Debug.Log ("Connected point: "+ c +" fount in triangle no: "+indexOfTriangle +" is on mesh' edge.");
+						Debug.Log ("Connected point: " + c + " fount in triangle no: " + indexOfTriangle + " is on mesh' edge.");
 
-						if (edges [0] != c && edges [1] !=c){
-						edges[e]=c;
-						e++;
+						if (edges [0] != c && edges [1] != c) {
+							edges [e] = c;
+							e++;
 						}
 
 
@@ -237,7 +281,7 @@ public class Point
 				}
 			}
 
-			j = indexOfPoint+1;
+			j = indexOfPoint + 1;
 
 
 		}

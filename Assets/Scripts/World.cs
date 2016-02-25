@@ -105,6 +105,8 @@ public class World : MonoBehaviour
 			// Check if the point is in the mesh. If it's field of view is smaller than 180°, it is outside. If it is larger than 180°, it is inside.
 			// Next, we could reject a point if it's fov is too close to 180, which'd mean it was very close to the edge.
 
+			newPoint.getFov2(n);
+
 
 			if (newPoint.getFov (n) >= 180.0f) {
 				// Point is in the existing mesh.
