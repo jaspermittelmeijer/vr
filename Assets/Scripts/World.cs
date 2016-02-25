@@ -9,14 +9,13 @@ public class World : MonoBehaviour
 	private Vector2[] newUV;
 	private int[] newTriangles;
 	private Vector3 leg1, leg2, normal;
-
 	private List<int> edge;
-
-
-//	private CustomRender customRender;
 
 	void addTriangle (int a, int b, int c, int i)
 	{
+
+		Debug.Log ("Added triangle: " + a + " " + b + " " + c + " at: " + i);
+
 
 		leg1 = newVertices [b] - newVertices [a];
 		leg2 = newVertices [c] - newVertices [a];
@@ -38,40 +37,7 @@ public class World : MonoBehaviour
 
 	}
 
-	/*
-	float pointFov (int n, int nMax){
 
-		float minAngle = 1000.0f;
-		float maxAngle = -1000.0f;
-		
-		Vector2 pn = new Vector2 (newVertices [n].x, newVertices [n].z);
-				
-		// Go through all points
-		for (int i=0; i<nMax; i++) {
-
-			// Except the intended point itself
-			if (i!=n){
-
-			Vector2 pi = new Vector2 (newVertices [i].x, newVertices [i].z);
-			Vector2 cast = pi-pn;
-			
-			float angle = Mathf.Rad2Deg * Mathf.Atan2( cast.y,  cast.x);
-
-			minAngle = Mathf.Min (minAngle,angle);
-			maxAngle = Mathf.Max (maxAngle,angle);
-			
-			}
-			
-		}
-		
-//		Debug.Log ("Max: " + maxAngle + " Min: " + minAngle +" FOV: " + (maxAngle-minAngle));
-
-		return (maxAngle - minAngle);
-
-	}
-
-
-*/
 	// Use this for initialization
 	void Start ()
 	{
@@ -85,17 +51,17 @@ public class World : MonoBehaviour
 
 
 		newVertices = new Vector3[numberOfVertices];
-		// first 3 verices = 1 triangle. Each next vertice can generate no more than 2 additional triangles.
 
-		newTriangles = new int[3*(1+((numberOfVertices-3)*2)) ];
-
-
+		// first 3 verices = 1 triangle. Each next vertice can generate no more than 2 additional triangles. This may be untrue
+		newTriangles = new int[3 * (1 + ((numberOfVertices - 3) * 2)) ];
 
 
-		for (int i=0; i<numberOfVertices; i++) {
-			float x = -200.0f+Random.value * 400.0f;
-			float y = 0.0f;
-			float z = -200.0f+Random.value * 400.0f;
+		float x, y, z;
+
+		for (int i=0; i<3; i++) {
+			x = -200.0f + Random.value * 400.0f;
+			y = 0.0f;
+			z = -200.0f + Random.value * 400.0f;
 //			Debug.Log (x +" "+z);
 			newVertices [i] = new Vector3 (x, y, z);
 
@@ -111,113 +77,129 @@ public class World : MonoBehaviour
 
 
 		// Set up the initial triangle for delauney
-	
 		addTriangle (0, 1, 2, 0);
 
 	
 
-		// Now add points one by one
+
+		// Now start adding points, and add triangles as we go
 
 		int n = 3;
-
 		int triangleIndex = 3;
 
 
-		Point newPoint =  new Point (n, newTriangles, newVertices);
-
-
-//		Debug.Log ("fov: "+newPoint.getFov(n));
-
-
-		if (newPoint.getFov(n) >= 180.0f) {
-
-			Debug.Log ("Point " + n + "is in the mesh");
-
-
-		} else {
-			// not in mesh
-
-			// find closest point
-
-//			int closestPoint = newPoint.getClosestPoint(n);
-
-			// Let start adding triangle from here
-
-			// Create a list of points this point is connected to and iterate over those until we're done
-
-
-	
+		while (n<numberOfVertices) {
 
 
 
+			// Create a vertice
+			x = -200.0f + Random.value * 400.0f;
+			y = 0.0f;
+			z = -200.0f + Random.value * 400.0f;
+			newVertices [n] = new Vector3 (x, y, z);
 
-//			int start = newPoint.getVisibleAntiClockwise(n);
-//			int end = 
-
-			int startIndex = newPoint.getVisibleAntiClockwise(n);
-
-			Debug.Log("Start extreme visible anti clockwise: "+newPoint.getVisibleAntiClockwise(n));
-
-
-			int endIndex = newPoint.getVisibleClockwise(n);
-
-			Debug.Log("End extreme visible clockwise: "+endIndex);
+			// Create point for our vertice
+			Point newPoint = new Point (n, newTriangles, newVertices);
 
 
-			Point startPoint =  new Point (startIndex,newTriangles,newVertices);
-
-			
-			int[] theEdges = startPoint.findEdges(n,triangleIndex);
-			
-			Debug.Log ("Edge a: "+ theEdges[0]);
-			Debug.Log ("Edge b: "+ theEdges[1]);
-			int current, last;
+			// Check if the point is in the mesh. If it's field of view is smaller than 180°, it is outside. If it is larger than 180°, it is inside.
+			// Next, we could reject a point if it's fov is too close to 180, which'd mean it was very close to the edge.
 
 
-			if (newPoint.distanceTo(theEdges[0]) < newPoint.distanceTo(theEdges[1]) ){
-
-				addTriangle (startIndex, theEdges[0], n, triangleIndex);
-				current =theEdges[0];
-				last = startIndex;
+			if (newPoint.getFov (n) >= 180.0f) {
+				// Point is in the existing mesh.
+				// We'll need to find the triangle it is in, delete that and split it into 3 new ones.
+				Debug.Log ("Point " + n + "is in the mesh");
 
 
 			} else {
+				// Point is not in existing mesh. Which means we'll add triangles to connect it to all the vertices it can 'see'.
 
-				addTriangle (startIndex, theEdges[1], n, triangleIndex);
-				current =theEdges[1];
-				last = startIndex;
-			}
+		
 
-			triangleIndex +=3;
+				// Find out what 'visible' point is most anticlockwise, we'll start there.
+				int startIndex = newPoint.getVisibleAntiClockwise (n);
 
-			/*
+				Debug.Log ("Start extreme visible anti clockwise: " + newPoint.getVisibleAntiClockwise (n));
 
-			Point currentPoint = new Point (current,newTriangles,newVertices);
+				// Find out what 'visible' point is most clockwise, we'll stop there.
+				int endIndex = newPoint.getVisibleClockwise (n);
 
-			theEdges = currentPoint.findEdges(n,3);
+				Debug.Log ("End extreme visible clockwise: " + endIndex);
 
+//			Point currentPoint;
 
-			if (theEdges[0] != last && theEdges [0] != endIndex ){
-				
-				addTriangle (current, theEdges[0], n, triangleIndex);
-				last = current;
-				current =theEdges[0];
-				
-			} else if (theEdges [1] != endIndex ){
-				
-				addTriangle (current, theEdges[1], n, triangleIndex);
-				last = current;
-				current =theEdges[1];
-			}
+				// Create our departure point. This point is on the edge by definition, since it is the outer one 'visible' to our new point.
+				Point startPoint = new Point (startIndex, newTriangles, newVertices);
+				Point endPoint = new Point (endIndex, newTriangles, newVertices);
 
 
+
+
+				// Get the 2 points on the edge our starting edge point is connected to.
+				int[] theEdges = startPoint.findEdges (n, triangleIndex);
 			
-			*/
-			
-			
+				Debug.Log ("Edge a: " + theEdges [0]);
+				Debug.Log ("Edge b: " + theEdges [1]);
 
 
-		}
+				int currentTriangleIndex = triangleIndex;
+				int current, last;
+
+				// We need to start in the right direction
+				if (newPoint.distanceTo (theEdges [0]) < newPoint.distanceTo (theEdges [1])) {
+
+					addTriangle (startIndex, theEdges [0], n, triangleIndex);
+					current = theEdges [0];
+					last = startIndex;
+
+
+				} else {
+
+					addTriangle (startIndex, theEdges [1], n, triangleIndex);
+					current = theEdges [1];
+					last = startIndex;
+				}
+
+				triangleIndex += 3;
+
+				// From here we can loop
+
+
+				// If the point we just added isn't the endpoint, continue
+				while (current != endIndex) {
+
+					Point currentPoint = new Point (current, newTriangles, newVertices);
+					// Note: we need to exclude triangles we're adding from the search.
+					theEdges = currentPoint.findEdges (n, currentTriangleIndex);
+
+
+					// One of the 2 returned points is the previous one
+					if (theEdges [0] != last) {
+					
+						addTriangle (current, theEdges [0], n, triangleIndex);
+						last = current;
+						current = theEdges [0];
+
+					
+					} else {
+					
+						addTriangle (current, theEdges [1], n, triangleIndex);
+						last = current;
+						current = theEdges [1];
+					}
+					triangleIndex += 3;
+
+				} // end while
+
+
+			} // end else: we're outside the mesh
+
+
+			n++;
+		
+
+		} // end while adding new points
 
 
 

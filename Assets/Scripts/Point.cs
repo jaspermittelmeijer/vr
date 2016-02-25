@@ -5,7 +5,7 @@ using System;
 public class Point
 {
 
-	private int index;
+	public int index;
 	private Point[] connectedPoints;
 	private float fov;
 //	private int observer;
@@ -196,6 +196,9 @@ public class Point
 		match = index;
 
 		int[] edges = new int[2];
+		edges [0] = -1;
+		edges [1] = -1;
+
 
 		int e = 0;
 	
@@ -207,6 +210,7 @@ public class Point
 			int indexOfTriangle = indexOfPoint / 3;
 
 			if (indexOfTriangle *3 >= tMax){
+				Debug.Log("Triangle out of range, aborting");
 				break;
 			}
 		
@@ -216,11 +220,13 @@ public class Point
 
 					int c = triangleReference [indexOfTriangle * 3 + i];
 
-					Debug.Log ("triangle: " + indexOfTriangle);
-					Debug.Log ("connected: " + c);
+//					Debug.Log ("triangle: " + indexOfTriangle);
+//					Debug.Log ("connected: " + c);
+
 					Point connectedPoint = new Point (c, triangleReference, verticeReference);
 					if (connectedPoint.getFov (nMax) < 180.0f) {
-						Debug.Log ("Point is on edge");
+						Debug.Log ("Connected point: "+ c +" fount in triangle no: "+indexOfTriangle +" is on mesh' edge.");
+
 						if (edges [0] != c && edges [1] !=c){
 						edges[e]=c;
 						e++;
