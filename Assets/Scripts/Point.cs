@@ -191,7 +191,7 @@ public class Point
 
 	public int[] findEdges (int nMax, int tMax)
 	{
-
+		// test
 		// we know that on the edge every point is connected to 2 other points on the edge
 		match = index;
 
