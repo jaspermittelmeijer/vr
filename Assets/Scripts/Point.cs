@@ -181,13 +181,15 @@ public class Point
 		// Add a dictionary entry for that key, referencing the same point
 		fovDictionary.Add (fovList [0] + 2 * PI, fovDictionary [fovList [0]]);
 
+		/*
 		foreach (var key in fovList) {
 			Debug.Log (" " + key + " " + fovDictionary [key]);
 		}
+		*/
 		
 		
 		inConvexMesh = true;
-		// Loop through keys and see if there's a delta angle bigger than PI. Note that this can't happen twice.
+		// Loop through keys and see if there's a delta angle bigger than PI. Note that this can't happen twice. If so, this point is outside the mesh (or on the edge)
 		
 		for (int i=0; i<fovList.Count-1; i++) {
 			if (fovList [i + 1] - fovList [i] > PI) {
@@ -202,7 +204,7 @@ public class Point
 			
 		}
 		
-		Debug.Log ("Point is in convex mesh: " + inConvexMesh);
+//		Debug.Log ("Point is in convex mesh: " + inConvexMesh);
 
 
 
@@ -226,44 +228,6 @@ public class Point
 
 
 	/*
-	public float getFov (int nMax)
-	{
-		
-		float minAngle = 1000.0f;
-		float maxAngle = -1000.0f;
-		
-		Vector2 pn = new Vector2 (verticeReference [index].x, verticeReference [index].z);
-		
-		// Go through all points
-		for (int i=0; i<nMax; i++) {
-			
-			// Except the intended point itself
-			if (i != index) {
-				
-				Vector2 pi = new Vector2 (verticeReference [i].x, verticeReference [i].z);
-				
-				//			float angle = Vector2.Angle(pi-pn, zero);
-				
-				Vector2 cast = pi - pn;
-				
-				float angle = Mathf.Rad2Deg * Mathf.Atan2 (cast.y, cast.x);
-				
-				//			Debug.Log (cast.x +" " + cast.y+ " angle: "+angle);
-				
-				minAngle = Mathf.Min (minAngle, angle);
-				maxAngle = Mathf.Max (maxAngle, angle);
-				
-			}
-			
-		}
-		
-		//		Debug.Log ("Max: " + maxAngle + " Min: " + minAngle +" FOV: " + (maxAngle-minAngle));
-		
-		return (maxAngle - minAngle);
-		
-	}
-	*/
-
 	static bool testMatch (int input)
 	{
 		
@@ -275,6 +239,7 @@ public class Point
 		}
 		
 	}
+	*/
 
 	public float distanceTo (int passedIndex)
 	{
@@ -286,65 +251,6 @@ public class Point
 
 
 	}
-
-	/*
-	public int[] findEdges (int nMax, int tMax)
-	{
-		// test
-		// we know that on the edge every point is connected to 2 other points on the edge
-		match = index;
-
-		int[] edges = new int[2];
-		edges [0] = -1;
-		edges [1] = -1;
-
-
-		int e = 0;
-	
-		int j = 0;
-
-		while (Array.FindIndex<int> (triangleReference, j, testMatch) != -1) {
-
-			int indexOfPoint = Array.FindIndex<int> (triangleReference, j, testMatch);
-			int indexOfTriangle = indexOfPoint / 3;
-
-			if (indexOfTriangle * 3 >= tMax) {
-				Debug.Log ("Triangle out of range, aborting");
-				break;
-			}
-		
-			for (int i=0; i<3; i++) {
-			
-				if (i != indexOfPoint % 3) {
-
-					int c = triangleReference [indexOfTriangle * 3 + i];
-
-//					Debug.Log ("triangle: " + indexOfTriangle);
-//					Debug.Log ("connected: " + c);
-
-					Point connectedPoint = new Point (c, triangleReference, verticeReference);
-					if (connectedPoint.getFov (nMax) < 180.0f) {
-						Debug.Log ("Connected point: " + c + " fount in triangle no: " + indexOfTriangle + " is on mesh' edge.");
-
-						if (edges [0] != c && edges [1] != c) {
-							edges [e] = c;
-							e++;
-						}
-
-
-					}
-				}
-			}
-
-			j = indexOfPoint + 1;
-
-
-		}
-
-		return edges;
-	}
-	*/
-
 
 
 }

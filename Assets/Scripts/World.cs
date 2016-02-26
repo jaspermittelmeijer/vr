@@ -47,7 +47,7 @@ public class World : MonoBehaviour
 		gameObject.AddComponent<CustomRender> ();
 
 
-		int numberOfVertices = 5;
+		int numberOfVertices = 10;
 
 
 		newVertices = new Vector3[numberOfVertices];
@@ -73,7 +73,6 @@ public class World : MonoBehaviour
 		newVertices [1] = new Vector3 (100.0f, 0.0f, 0.0f);
 		newVertices [2] = new Vector3 (0.0f, 0.0f, 100.0f);
 
-//	newVertices [3] = new Vector3 (200.0f, 0.0f, 200.0f);
 
 
 		// Set up the initial triangle for delauney
@@ -107,12 +106,13 @@ public class World : MonoBehaviour
 
 
 
-//			if (newPoint.getFov (n) >= 180.0f) {
-
 			if (newPoint.isInConvexMesh()) {
 				// Point is in the existing mesh.
 				// We'll need to find the triangle it is in, delete that and split it into 3 new ones.
-//				Debug.Log ("Point " + n + "is in the mesh");
+				Debug.Log ("Point " + n + "is in the mesh");
+
+
+
 
 
 			} else {
@@ -122,32 +122,26 @@ public class World : MonoBehaviour
 				int current, next, end;
 
 				// Find out what 'visible' point is most anticlockwise, we'll start there.
-//				current = newPoint.getVisibleAntiClockwise ();
 				current = newPoint.getVisibleMostBackward();
 
 				
-//				Debug.Log ("Start extreme visible anti clockwise: " + current);
-				Debug.Log ("Start extreme visible anti clockwise: " + newPoint.getVisibleMostBackward());
+				Debug.Log ("Start extreme back: " + current);
 
 
 				// Find out what 'visible' point is most clockwise, we'll stop there.
-//				end = newPoint.getVisibleClockwise ();
 				end = newPoint.getVisibleMostForward ();
 
-//				Debug.Log ("End extreme visible clockwise: " + end);
-				Debug.Log ("End extreme visible clockwise: " + newPoint.getVisibleMostForward());
+				Debug.Log ("End extreme forward: " + end);
 
 				
-				//			Point currentPoint;
 
 				// Create our departure point. This point is on the edge by definition, since it is the outer one 'visible' to our new point.
 
-//				Point endPoint = new Point (endIndex, newTriangles, newVertices);
 
 				while (current != end) {
 					Point currentPoint = new Point (current, newTriangles, newVertices,n);
-//					next = currentPoint.getVisibleClockwise ();
 					next = currentPoint.getVisibleMostForward ();
+					Debug.Log("next: "+next);
 
 					addTriangle (current, next, n, triangleIndex);
 					triangleIndex += 3;
@@ -158,86 +152,6 @@ public class World : MonoBehaviour
 			n++;
 		}
 
-
-		/*
-				// Get the 2 points on the edge our starting edge point is connected to.
-				int[] theEdges = startPoint.findEdges (n, triangleIndex);
-			
-				Debug.Log ("Edge a: " + theEdges [0]);
-				Debug.Log ("Edge b: " + theEdges [1]);
-
-
-				int currentTriangleIndex = triangleIndex;
-				int current, last;
-
-				// We need to start in the right direction
-				if (newPoint.distanceTo (theEdges [0]) < newPoint.distanceTo (theEdges [1])) {
-
-					addTriangle (startIndex, theEdges [0], n, triangleIndex);
-					current = theEdges [0];
-					last = startIndex;
-
-
-				} else {
-
-					addTriangle (startIndex, theEdges [1], n, triangleIndex);
-					current = theEdges [1];
-					last = startIndex;
-				}
-
-				triangleIndex += 3;
-
-				// From here we can loop
-
-
-				// If the point we just added isn't the endpoint, continue
-				while (current != endIndex) {
-
-					Point currentPoint = new Point (current, newTriangles, newVertices);
-					// Note: we need to exclude triangles we're adding from the search.
-					theEdges = currentPoint.findEdges (n, currentTriangleIndex);
-
-
-					// One of the 2 returned points is the previous one
-					if (theEdges [0] != last) {
-					
-						addTriangle (current, theEdges [0], n, triangleIndex);
-						last = current;
-						current = theEdges [0];
-
-					
-					} else {
-					
-						addTriangle (current, theEdges [1], n, triangleIndex);
-						last = current;
-						current = theEdges [1];
-					}
-					triangleIndex += 3;
-
-				} // end while
-
-
-			} // end else: we're outside the mesh
-
-
-			n++;
-		
-
-		} // end while adding new points
-
-
-
-*/
-
-
-//		if (pointFov (0,n) <= 180.0f) {
-//			
-//			Debug.Log ("Point 0 is on the edge");
-//
-//
-//
-//			
-//		}
 
 
 
