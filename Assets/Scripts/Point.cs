@@ -7,6 +7,14 @@ using System.Linq;
 public class Point
 {
 
+	Dictionary <float,int> fovDictionary;
+	List<float> fovList;
+
+	bool inConvexMesh;
+	int visibleMostForward;
+	int visibleMostBackward;
+
+
 	public int index;
 	private Point[] connectedPoints;
 	private float fov;
@@ -14,16 +22,19 @@ public class Point
 	static int match;
 	private int[] triangleReference;
 	private Vector3[] verticeReference;
-
 	private float PI = Mathf.PI ;
+	private int maxVerts;
 
-
-	public Point (int _index, int[] _triangleReference, Vector3[] _verticeReference)
+	public Point (int _index, int[] _triangleReference, Vector3[] _verticeReference, int _maxVerts)
 	{
 		index = _index;
 		triangleReference = _triangleReference;
 		verticeReference = _verticeReference;
+		maxVerts = _maxVerts;
 
+
+		pointSweep ();
+	
 
 	}
 
@@ -38,12 +49,12 @@ public class Point
 //
 //	}
 
-	public int getClosestPoint (int nMax)
+	public int getClosestPoint ()
 	{
 		float minDistance = 100000000.0f;
 		int closestPoint = -1;
 		
-		for (int i=0; i<nMax; i++) {
+		for (int i=0; i<maxVerts; i++) {
 			
 			float distance = (new Vector2 (verticeReference [i].x, verticeReference [i].z) - new Vector2 (verticeReference [index].x, verticeReference [index].z)).magnitude;
 //			Debug.Log ("Distance to " + i + "= " + distance);
@@ -62,7 +73,7 @@ public class Point
 
 	}
 
-	public int getVisibleAntiClockwise (int nMax)
+	public int getVisibleAntiClockwise ()
 	{
 		float maxAngle = -1000.0f;
 		int maxIndex = -1;
@@ -70,7 +81,7 @@ public class Point
 		Vector2 pn = new Vector2 (verticeReference [index].x, verticeReference [index].z);
 		
 		// Go through all points
-		for (int i=0; i<nMax; i++) {
+		for (int i=0; i<maxVerts; i++) {
 			
 			// Except the intended point itself
 			if (i != index) {
@@ -98,7 +109,7 @@ public class Point
 
 	}
 
-	public int getVisibleClockwise (int nMax)
+	public int getVisibleClockwise ()
 	{
 		float minAngle = 1000.0f;
 		int minIndex = -1;
@@ -106,7 +117,7 @@ public class Point
 		Vector2 pn = new Vector2 (verticeReference [index].x, verticeReference [index].z);
 		
 		// Go through all points
-		for (int i=0; i<nMax; i++) {
+		for (int i=0; i<maxVerts; i++) {
 			
 			// Except the intended point itself
 			if (i != index) {
@@ -134,45 +145,87 @@ public class Point
 		
 	}
 
-	public float getFov2 (int nMax)
+
+
+
+	private void pointSweep ()
 	{
 
 		// Set up a dictionary: we use our float angle as the key, and the point that concerns as the value.
-
-		var dictionary = new Dictionary<float, int> ();
-//		dictionary.Add (10.0f, 2);
-//		dictionary.Add (5.0f, 3);
-
-
+		
+		fovDictionary = new Dictionary<float, int> ();
+		
 		Vector2 thisPoint = new Vector2 (verticeReference [index].x, verticeReference [index].z);
-
+		
 		// Loop through all points
-		for (int i=0; i<nMax; i++) {
+		for (int i=0; i<maxVerts; i++) {
 			// Except the intended point itself
 			if (i != index) {
 				Vector2 thePoint = new Vector2 (verticeReference [i].x, verticeReference [i].z);
 				Vector2 cast = thePoint - thisPoint;
 				float angle = Mathf.Atan2 (cast.y, cast.x);
-
-				dictionary.Add (angle, i);
+				
+				fovDictionary.Add (angle, i);
 			}
-
+			
 		}
-
+		
 		// Acquire keys (the angles) and sort them
-		var list = dictionary.Keys.ToList ();
-		list.Sort ();
+		fovList = fovDictionary.Keys.ToList ();
+		fovList.Sort ();
+		
+		//		Debug.Log ("Lowest " + fovList [0]);
+		
+		// Add a key for the lowest angle plus 2PI
+		fovList.Add (fovList [0] + 2 * PI);
+		// Add a dictionary entry for that key, referencing the same point
+		fovDictionary.Add (fovList [0] + 2 * PI, fovDictionary [fovList [0]]);
 
-		// Loop through keys.
-		foreach (var key in list) {
-			Debug.Log (" "+key +" "+dictionary [key]);
+		foreach (var key in fovList) {
+			Debug.Log (" " + key + " " + fovDictionary [key]);
 		}
+		
+		
+		inConvexMesh = true;
+		// Loop through keys and see if there's a delta angle bigger than PI. Note that this can't happen twice.
+		
+		for (int i=0; i<fovList.Count-1; i++) {
+			if (fovList [i + 1] - fovList [i] > PI) {
+				inConvexMesh = false;
+				// The visble most forward point will be the one referenced by i+1.
+				visibleMostForward = fovDictionary [fovList [i + 1]];
+				visibleMostBackward = fovDictionary [fovList [i]];
+
+				
+				
+			}
+			
+		}
+		
+		Debug.Log ("Point is in convex mesh: " + inConvexMesh);
 
 
-		return 0.0f;
 
 	}
 
+
+
+	public bool isInConvexMesh ()
+	{
+		return (inConvexMesh);
+
+	}
+
+	public int getVisibleMostForward (){
+		return visibleMostForward;
+	}
+
+	public int getVisibleMostBackward (){
+		return visibleMostBackward;
+	}
+
+
+	/*
 	public float getFov (int nMax)
 	{
 		
@@ -209,6 +262,7 @@ public class Point
 		return (maxAngle - minAngle);
 		
 	}
+	*/
 
 	static bool testMatch (int input)
 	{
@@ -233,6 +287,7 @@ public class Point
 
 	}
 
+	/*
 	public int[] findEdges (int nMax, int tMax)
 	{
 		// test
@@ -288,6 +343,7 @@ public class Point
 
 		return edges;
 	}
+	*/
 
 
 

@@ -47,13 +47,13 @@ public class World : MonoBehaviour
 		gameObject.AddComponent<CustomRender> ();
 
 
-		int numberOfVertices = 4;
+		int numberOfVertices = 5;
 
 
 		newVertices = new Vector3[numberOfVertices];
 
 		// first 3 verices = 1 triangle. Each next vertice can generate no more than 2 additional triangles. This may be untrue
-		newTriangles = new int[3 * (1 + ((numberOfVertices - 3) * 2)) ];
+		newTriangles = new int[3 * numberOfVertices * 2 ];
 
 
 		float x, y, z;
@@ -98,46 +98,68 @@ public class World : MonoBehaviour
 			z = -200.0f + Random.value * 400.0f;
 			newVertices [n] = new Vector3 (x, y, z);
 
-			// Create point for our vertice
-			Point newPoint = new Point (n, newTriangles, newVertices);
+			// Create point for our new vertice
+			Point newPoint = new Point (n, newTriangles, newVertices,n);
 
 
 			// Check if the point is in the mesh. If it's field of view is smaller than 180°, it is outside. If it is larger than 180°, it is inside.
 			// Next, we could reject a point if it's fov is too close to 180, which'd mean it was very close to the edge.
 
-			newPoint.getFov2(n);
 
 
-			if (newPoint.getFov (n) >= 180.0f) {
+//			if (newPoint.getFov (n) >= 180.0f) {
+
+			if (newPoint.isInConvexMesh()) {
 				// Point is in the existing mesh.
 				// We'll need to find the triangle it is in, delete that and split it into 3 new ones.
-				Debug.Log ("Point " + n + "is in the mesh");
+//				Debug.Log ("Point " + n + "is in the mesh");
 
 
 			} else {
 				// Point is not in existing mesh. Which means we'll add triangles to connect it to all the vertices it can 'see'.
 
 		
+				int current, next, end;
 
 				// Find out what 'visible' point is most anticlockwise, we'll start there.
-				int startIndex = newPoint.getVisibleAntiClockwise (n);
+//				current = newPoint.getVisibleAntiClockwise ();
+				current = newPoint.getVisibleMostBackward();
 
-				Debug.Log ("Start extreme visible anti clockwise: " + newPoint.getVisibleAntiClockwise (n));
+				
+//				Debug.Log ("Start extreme visible anti clockwise: " + current);
+				Debug.Log ("Start extreme visible anti clockwise: " + newPoint.getVisibleMostBackward());
+
 
 				// Find out what 'visible' point is most clockwise, we'll stop there.
-				int endIndex = newPoint.getVisibleClockwise (n);
+//				end = newPoint.getVisibleClockwise ();
+				end = newPoint.getVisibleMostForward ();
 
-				Debug.Log ("End extreme visible clockwise: " + endIndex);
+//				Debug.Log ("End extreme visible clockwise: " + end);
+				Debug.Log ("End extreme visible clockwise: " + newPoint.getVisibleMostForward());
 
-//			Point currentPoint;
+				
+				//			Point currentPoint;
 
 				// Create our departure point. This point is on the edge by definition, since it is the outer one 'visible' to our new point.
-				Point startPoint = new Point (startIndex, newTriangles, newVertices);
-				Point endPoint = new Point (endIndex, newTriangles, newVertices);
+
+//				Point endPoint = new Point (endIndex, newTriangles, newVertices);
+
+				while (current != end) {
+					Point currentPoint = new Point (current, newTriangles, newVertices,n);
+//					next = currentPoint.getVisibleClockwise ();
+					next = currentPoint.getVisibleMostForward ();
+
+					addTriangle (current, next, n, triangleIndex);
+					triangleIndex += 3;
+					current = next;
+				}
+
+			}
+			n++;
+		}
 
 
-
-
+		/*
 				// Get the 2 points on the edge our starting edge point is connected to.
 				int[] theEdges = startPoint.findEdges (n, triangleIndex);
 			
@@ -205,7 +227,7 @@ public class World : MonoBehaviour
 
 
 
-
+*/
 
 
 //		if (pointFov (0,n) <= 180.0f) {
