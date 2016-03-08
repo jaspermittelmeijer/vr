@@ -49,6 +49,8 @@ public class Point
 //
 //	}
 
+
+
 	public int getClosestPoint ()
 	{
 		float minDistance = 100000000.0f;
@@ -73,6 +75,7 @@ public class Point
 
 	}
 
+	/*
 	public int getVisibleAntiClockwise ()
 	{
 		float maxAngle = -1000.0f;
@@ -146,7 +149,7 @@ public class Point
 	}
 
 
-
+*/
 
 	private void pointSweep ()
 	{

@@ -42,6 +42,10 @@ public class World : MonoBehaviour
 	void Start ()
 	{
 
+
+		Debug.Log("ATAN2: " + Mathf.Atan2 (-0.0000001f,-1.0f));
+
+
 		gameObject.AddComponent<MeshFilter> ();
 		gameObject.AddComponent<MeshRenderer> ();
 		gameObject.AddComponent<CustomRender> ();
@@ -110,6 +114,8 @@ public class World : MonoBehaviour
 				// Point is in the existing mesh.
 				// We'll need to find the triangle it is in, delete that and split it into 3 new ones.
 				Debug.Log ("Point " + n + "is in the mesh");
+
+
 
 
 
