@@ -13,6 +13,8 @@ public class Development : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+
+
 		// Call script to apply settings that depend on platform (eg touch vs mouse)
 		if (!applyPlatformSettings ())
 			debugMessage ("Platform settings failed", 3.0f);

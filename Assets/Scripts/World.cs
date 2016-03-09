@@ -17,11 +17,12 @@ public class World : MonoBehaviour
 		
 		delauneyObject01.AddComponent<MeshFilter> ();
 		delauneyObject01.AddComponent<MeshRenderer> ();
+
 		delauneyObject01.AddComponent<CustomRender> ();
 
 
 		delauney01 = new Delauney ();
-		StartCoroutine(delauney01.createDelauney (15,500.0f));
+		StartCoroutine(delauney01.createDelauney (30,500.0f));
 
 
 
@@ -42,7 +43,7 @@ public class World : MonoBehaviour
 		
 		mesh.vertices = delauney01.getVertices();
 		mesh.triangles = delauney01.getTriangles();
-		
+		mesh.RecalculateNormals();
 		delauneyObject01.GetComponent <CustomRender> ().CreateLinesFromMesh ();
 	
 	}
