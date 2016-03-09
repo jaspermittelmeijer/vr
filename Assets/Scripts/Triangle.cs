@@ -22,12 +22,46 @@ public class Triangle
 
 	}
 
-	bool pointWithinBounds (int _pointIndex)
+	public bool pointWithinBounds (int _pointIndex)
 	{
 		pd = new Vector2 (verticeReference [_pointIndex].x, verticeReference [_pointIndex].z);
+		pa = new Vector2 (verticeReference [indA].x, verticeReference [indA].z);
+		pb = new Vector2 (verticeReference [indB].x, verticeReference [indB].z);
+		pc = new Vector2 (verticeReference [indC].x, verticeReference [indC].z);
 
-		// A point is within this triangle if, while iterating anti-clockwise, it is always
 
+//		Vector2 vec1 = pb - pa;
+//		Vector2 vec2 = pd - pa;
+
+		// A point is within this triangle if, while iterating anti-clockwise, it is always clockwise, or vice versa
+
+		// NOTE: current code may fail if normal up or down
+
+		bool bool01 = vectorsClockwise (pb - pa, pd - pa);
+		bool bool02 = vectorsClockwise (pc - pb, pd - pb);
+		bool bool03 = vectorsClockwise (pa - pc, pd - pc);
+
+		Debug.Log (bool01 + " " + bool02 + " " + bool03);
+
+// Check if ac is clockwise from ab or not
+
+		if (vectorsClockwise (pb - pa, pc - pa)) {
+			if (bool01 && bool02 && bool03) 
+				return true;
+			else
+				return false;
+
+
+		} else {
+
+		
+			if (bool01 && bool02 && bool03) 
+				return false;
+			else
+				return true;
+
+
+		}
 
 
 		/*
@@ -37,35 +71,29 @@ public class Triangle
 		                  */
 
 
-		return false;
+//		return false;
 
 	}
 
-	bool vectorsClockwise (Vector2 vec1, Vector2 vec2){
+	public bool vectorsClockwise (Vector2 vec1, Vector2 vec2){
 
-		float angle1 = Mathf.Atan2 (vec1.y, vec1.x); // -pi to pi
-		float angle2 = Mathf.Atan2 (vec2.y, vec2.x); // -pi to pi
+		float angle1 = Mathf.Atan2 (vec1.y, vec1.x); // -pi < atan2 <= pi
+		float angle2 = Mathf.Atan2 (vec2.y, vec2.x); // 
 
-		float angleDelta = angle1 - angle2; // min value -2pi, max value 2pi
-		// 0..pi:clockwise, pi..2pi: anticlock, -pi..0 anticlock, -2pi..-pi clock
+		float angleDelta = angle1 - angle2; // E -2PI < ad <= 2PI
+		// if <0 we add 2PI to simplify things
+		if (angleDelta < 0.0f)
+			angleDelta += 2.0f * Mathf.PI;
+//		Debug.Log (angleDelta);
 
-		if ((angleDelta >= 0.0f && angleDelta < Mathf.PI) || (angleDelta >= - 2.0f * Mathf.PI && angleDelta < -1.0f * Mathf.PI)) {
-
-
+	
+		// 0..pi:clockwise, pi..2pi: anticlock
+		if (0.0f < angleDelta && angleDelta <= Mathf.PI) {
 			return true;
 		} else {
 			return false;
 
 		}
-
-
-
-
-
-
-
-
-
 
 	}
 
