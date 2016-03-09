@@ -75,7 +75,7 @@ public class Triangle
 
 	}
 
-	public bool vectorsClockwise (Vector2 vec1, Vector2 vec2){
+	 bool vectorsClockwise (Vector2 vec1, Vector2 vec2){
 
 		float angle1 = Mathf.Atan2 (vec1.y, vec1.x); // -pi < atan2 <= pi
 		float angle2 = Mathf.Atan2 (vec2.y, vec2.x); // 
