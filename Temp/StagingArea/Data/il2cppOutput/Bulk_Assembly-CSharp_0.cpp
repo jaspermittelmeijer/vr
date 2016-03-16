@@ -29,6 +29,7 @@ struct t319835859;
 struct t1562406440;
 struct t4012695102;
 struct t1217738301;
+struct t1092684080;
 struct t83766130;
 struct t1424601847;
 
@@ -40,7 +41,9 @@ struct t1424601847;
 #include "t509473927.h"
 #include "t509473927MD.h"
 #include "t2779279689.h"
+#include "t1588175760MD.h"
 #include "t3012272455MD.h"
+#include "t1588175760.h"
 #include "t211005341.h"
 #include "t2847414787.h"
 #include "t3644373756MD.h"
@@ -64,10 +67,8 @@ struct t1424601847;
 #include "t62234258.h"
 #include "t1522887986MD.h"
 #include "t284553113MD.h"
-#include "t1588175760MD.h"
 #include "t284553113.h"
 #include "t277289660.h"
-#include "t1588175760.h"
 #include "t958209021.h"
 #include "t880701411.h"
 #include "t880701411MD.h"
@@ -107,9 +108,16 @@ struct t1424601847;
 #include "t4012695102.h"
 #include "t319835859.h"
 #include "t1217738301.h"
+#include "t1543782994MD.h"
+#include "t1092684080MD.h"
+#include "t1092684080.h"
 #include "t83766130.h"
 #include "t83766130MD.h"
+#include "t1891715979MD.h"
+#include "t1891715979.h"
 #include "t1593691127MD.h"
+#include "t3852595506MD.h"
+#include "t3852595506.h"
 
 extern "C"  Il2CppObject * m267839954_gshared (t2126946602 * __this, const MethodInfo* method);
 #define m267839954(__this, method) ((  Il2CppObject * (*) (t2126946602 *, const MethodInfo*))m267839954_gshared)(__this, method)
@@ -126,6 +134,7 @@ extern "C"  Il2CppObject * m337943659_gshared (t4012695102 * __this, const Metho
 #define m4036826379(__this, method) ((  t509473927 * (*) (t4012695102 *, const MethodInfo*))m337943659_gshared)(__this, method)
 #define m3315251873(__this, method) ((  t4177078322 * (*) (t4012695102 *, const MethodInfo*))m2447772384_gshared)(__this, method)
 #define m3966338038(__this, method) ((  t509473927 * (*) (t4012695102 *, const MethodInfo*))m2447772384_gshared)(__this, method)
+#define m4102086307(__this, method) ((  t1092684080 * (*) (t4012695102 *, const MethodInfo*))m2447772384_gshared)(__this, method)
 extern "C"  Il2CppObject* m198913216_gshared (Il2CppObject * __this , Il2CppObject* p0, const MethodInfo* method);
 #define m198913216(__this , p0, method) ((  Il2CppObject* (*) (Il2CppObject * , Il2CppObject*, const MethodInfo*))m198913216_gshared)(__this , p0, method)
 extern "C"  t1809983122* m2994446665_gshared (Il2CppObject * __this , Il2CppObject* p0, const MethodInfo* method);
@@ -138,6 +147,8 @@ extern "C"  t1809983122* m2994446665_gshared (Il2CppObject * __this , Il2CppObje
 extern "C"  void m345449972 (t509473927 * __this, const MethodInfo* method)
 {
 	{
+		t1588175760  L_0 = m1687201969(NULL, NULL);
+		__this->fs5(L_0);
 		m2022291967(__this, NULL);
 		return;
 	}
@@ -146,6 +157,14 @@ extern "C"  void m3587555060 (t509473927 * __this, const MethodInfo* method)
 {
 	{
 		m2650714328(__this, NULL);
+		return;
+	}
+}
+extern "C"  void m1231589026 (t509473927 * __this, t1588175760  p0, const MethodInfo* method)
+{
+	{
+		t1588175760  L_0 = p0;
+		__this->fs5(L_0);
 		return;
 	}
 }
@@ -348,7 +367,7 @@ IL_0061:
 	}
 }
 extern TypeInfo* t1886596500_TI_var;
-extern Il2CppCodeGenString* _stringLiteral1377272541;
+extern Il2CppCodeGenString* _stringLiteral2674273751;
 extern Il2CppCodeGenString* _stringLiteral4004615756;
 extern Il2CppCodeGenString* _stringLiteral711496459;
 extern Il2CppCodeGenString* _stringLiteral89846385;
@@ -372,7 +391,7 @@ extern "C"  void m489261351 (t509473927 * __this, const MethodInfo* method)
 		}
 	}
 	{
-		t3998140498 * L_2 = m4048047578(NULL, _stringLiteral1377272541, NULL);
+		t3998140498 * L_2 = m4048047578(NULL, _stringLiteral2674273751, NULL);
 		V_0 = L_2;
 		t3998140498 * L_3 = V_0;
 		t1886596500 * L_4 = (t1886596500 *)il2cpp_codegen_object_new(t1886596500_TI_var);
@@ -408,12 +427,12 @@ extern "C"  void m1343023364 (t509473927 * __this, const MethodInfo* method)
 		m1618741133(NULL, L_2, NULL);
 		m3089952800(NULL, 1, NULL);
 		V_0 = 0;
-		goto IL_00fb;
+		goto IL_00fc;
 	}
 
 IL_0035:
 	{
-		t1588175760  L_3 = m4288945411(NULL, NULL);
+		t1588175760  L_3 = __this->fg5();
 		m501875645(NULL, L_3, NULL);
 		t3227571696* L_4 = __this->fg4();
 		t3644373756 * L_5 = __this->fg3();
@@ -451,7 +470,7 @@ IL_0035:
 		V_0 = ((int32_t)((int32_t)L_34+(int32_t)2));
 	}
 
-IL_00fb:
+IL_00fc:
 	{
 		int32_t L_35 = V_0;
 		t3644373756 * L_36 = __this->fg3();
@@ -1637,8 +1656,11 @@ IL_001b:
 	}
 }
 extern Il2CppCodeGenString* _stringLiteral4043159287;
+extern Il2CppCodeGenString* _stringLiteral2071006605;
 extern Il2CppCodeGenString* _stringLiteral70266987;
+extern Il2CppCodeGenString* _stringLiteral2399528015;
 extern Il2CppCodeGenString* _stringLiteral3946668416;
+extern Il2CppCodeGenString* _stringLiteral83451673;
 extern const uint32_t m1117129958_MetadataUsageId;
 extern "C"  bool m1117129958 (t1443054875 * __this, const MethodInfo* method)
 {
@@ -1662,39 +1684,42 @@ extern "C"  bool m1117129958 (t1443054875 * __this, const MethodInfo* method)
 		int32_t L_2 = V_0;
 		if ((((int32_t)L_2) == ((int32_t)1)))
 		{
-			goto IL_0035;
+			goto IL_0040;
 		}
 	}
 	{
 		int32_t L_3 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)((int32_t)17))))
 		{
-			goto IL_004a;
+			goto IL_0060;
 		}
 	}
 	{
-		goto IL_005f;
+		goto IL_0080;
 	}
 
 IL_0020:
 	{
 		m3225059519(__this, _stringLiteral4043159287, (5.0f), NULL);
-		goto IL_005f;
+		__this->fs2(_stringLiteral2071006605);
+		goto IL_0080;
 	}
 
-IL_0035:
+IL_0040:
 	{
 		m3225059519(__this, _stringLiteral70266987, (5.0f), NULL);
-		goto IL_005f;
+		__this->fs2(_stringLiteral2399528015);
+		goto IL_0080;
 	}
 
-IL_004a:
+IL_0060:
 	{
 		m3225059519(__this, _stringLiteral3946668416, (5.0f), NULL);
-		goto IL_005f;
+		__this->fs2(_stringLiteral83451673);
+		goto IL_0080;
 	}
 
-IL_005f:
+IL_0080:
 	{
 		return (bool)1;
 	}
@@ -1704,17 +1729,17 @@ extern "C"  bool m4063740457 (t1443054875 * __this, const MethodInfo* method)
 	bool V_0 = false;
 	{
 		V_0 = (bool)0;
-		float L_0 = __this->fg4();
+		float L_0 = __this->fg5();
 		if ((!(((float)L_0) > ((float)(0.0f)))))
 		{
 			goto IL_0036;
 		}
 	}
 	{
-		float L_1 = __this->fg4();
+		float L_1 = __this->fg5();
 		float L_2 = m2741110510(NULL, NULL);
-		__this->fs4(((float)((float)L_1-(float)L_2)));
-		float L_3 = __this->fg4();
+		__this->fs5(((float)((float)L_1-(float)L_2)));
+		float L_3 = __this->fg5();
 		if ((!(((float)L_3) < ((float)(0.0f)))))
 		{
 			goto IL_0036;
@@ -1744,18 +1769,18 @@ extern "C"  void m3225059519 (t1443054875 * __this, String_t* p0, float p1, cons
 		String_t* L_0 = p0;
 		IL2CPP_RUNTIME_CLASS_INIT(t1588791936_TI_var);
 		m1731103628(NULL, L_0, NULL);
-		bool L_1 = __this->fg2();
+		bool L_1 = __this->fg3();
 		if (!L_1)
 		{
 			goto IL_0024;
 		}
 	}
 	{
-		t3286458198 * L_2 = __this->fg3();
+		t3286458198 * L_2 = __this->fg4();
 		String_t* L_3 = p0;
 		VirtActionInvoker1< String_t* >::Invoke(65 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_3);
 		float L_4 = p1;
-		__this->fs4(L_4);
+		__this->fs5(L_4);
 	}
 
 IL_0024:
@@ -2132,46 +2157,34 @@ extern "C"  void m2551614511 (t1244243154 * __this, float p0, int32_t p1, float 
 		t3525329789  L_11;
 		memset(&L_11, 0, sizeof(L_11));
 		m2926210380(&L_11, (0.0f), (0.0f), (0.0f), NULL);
-		t1588175760  L_12;
-		memset(&L_12, 0, sizeof(L_12));
-		m103496991(&L_12, (1.0f), (1.0f), (1.0f), NULL);
-		m3187468309(L_10, L_11, L_12, (0.05f), NULL);
-		t4012695102 * L_13 = m332785498(NULL, _stringLiteral319835859, NULL);
-		t319835859 * L_14 = m2142446126(L_13, m2142446126_MI_var);
-		float L_15 = __this->fg0();
-		t3525329789  L_16;
-		memset(&L_16, 0, sizeof(L_16));
-		m2926210380(&L_16, (0.0f), (0.0f), L_15, NULL);
-		t1588175760  L_17;
-		memset(&L_17, 0, sizeof(L_17));
-		m103496991(&L_17, (1.0f), (1.0f), (1.0f), NULL);
-		m3187468309(L_14, L_16, L_17, (0.05f), NULL);
-		t4012695102 * L_18 = m332785498(NULL, _stringLiteral319835859, NULL);
-		t319835859 * L_19 = m2142446126(L_18, m2142446126_MI_var);
-		float L_20 = __this->fg0();
-		t3525329789  L_21;
-		memset(&L_21, 0, sizeof(L_21));
-		m2926210380(&L_21, L_20, (0.0f), (0.0f), NULL);
-		t1588175760  L_22;
-		memset(&L_22, 0, sizeof(L_22));
-		m103496991(&L_22, (1.0f), (1.0f), (1.0f), NULL);
-		m3187468309(L_19, L_21, L_22, (0.05f), NULL);
-		t4012695102 * L_23 = m332785498(NULL, _stringLiteral319835859, NULL);
-		t319835859 * L_24 = m2142446126(L_23, m2142446126_MI_var);
-		float L_25 = __this->fg0();
-		float L_26 = __this->fg0();
-		t3525329789  L_27;
-		memset(&L_27, 0, sizeof(L_27));
-		m2926210380(&L_27, L_25, (0.0f), L_26, NULL);
-		t1588175760  L_28;
-		memset(&L_28, 0, sizeof(L_28));
-		m103496991(&L_28, (1.0f), (1.0f), (1.0f), NULL);
-		m3187468309(L_24, L_27, L_28, (0.05f), NULL);
-		int32_t L_29 = __this->fg4();
-		int32_t L_30 = __this->fg4();
-		il2cpp_array_size_t L_32[] = { (il2cpp_array_size_t)L_29, (il2cpp_array_size_t)L_30 };
-		t1219431281* L_31 = (t1219431281*)GenArrayNew(t1219431281_TI_var, L_32);
-		__this->fs6(L_31);
+		m1998006030(L_10, L_11, (0.05f), NULL);
+		t4012695102 * L_12 = m332785498(NULL, _stringLiteral319835859, NULL);
+		t319835859 * L_13 = m2142446126(L_12, m2142446126_MI_var);
+		float L_14 = __this->fg0();
+		t3525329789  L_15;
+		memset(&L_15, 0, sizeof(L_15));
+		m2926210380(&L_15, (0.0f), (0.0f), L_14, NULL);
+		m1998006030(L_13, L_15, (0.05f), NULL);
+		t4012695102 * L_16 = m332785498(NULL, _stringLiteral319835859, NULL);
+		t319835859 * L_17 = m2142446126(L_16, m2142446126_MI_var);
+		float L_18 = __this->fg0();
+		t3525329789  L_19;
+		memset(&L_19, 0, sizeof(L_19));
+		m2926210380(&L_19, L_18, (0.0f), (0.0f), NULL);
+		m1998006030(L_17, L_19, (0.05f), NULL);
+		t4012695102 * L_20 = m332785498(NULL, _stringLiteral319835859, NULL);
+		t319835859 * L_21 = m2142446126(L_20, m2142446126_MI_var);
+		float L_22 = __this->fg0();
+		float L_23 = __this->fg0();
+		t3525329789  L_24;
+		memset(&L_24, 0, sizeof(L_24));
+		m2926210380(&L_24, L_22, (0.0f), L_23, NULL);
+		m1998006030(L_21, L_24, (0.05f), NULL);
+		int32_t L_25 = __this->fg4();
+		int32_t L_26 = __this->fg4();
+		il2cpp_array_size_t L_28[] = { (il2cpp_array_size_t)L_25, (il2cpp_array_size_t)L_26 };
+		t1219431281* L_27 = (t1219431281*)GenArrayNew(t1219431281_TI_var, L_28);
+		__this->fs6(L_27);
 		m3363214381(__this, NULL);
 		m260186208(__this, NULL);
 		m1825254487(__this, NULL);
@@ -3466,17 +3479,163 @@ extern "C"  t4012695102 * m3187468309 (t319835859 * __this, t3525329789  p0, t15
 		return L_54;
 	}
 }
+extern TypeInfo* t4012695102_TI_var;
+extern TypeInfo* t1525280346_TI_var;
+extern TypeInfo* t3227571696_TI_var;
+extern TypeInfo* t1809983122_TI_var;
+extern TypeInfo* t1886596500_TI_var;
+extern const MethodInfo* m638563702_MI_var;
+extern const MethodInfo* m3074975883_MI_var;
+extern const MethodInfo* m4036826379_MI_var;
+extern const MethodInfo* m3315251873_MI_var;
+extern const MethodInfo* m3966338038_MI_var;
+extern const MethodInfo* m4102086307_MI_var;
+extern Il2CppCodeGenString* _stringLiteral1696563623;
+extern Il2CppCodeGenString* _stringLiteral1805297557;
+extern const uint32_t m1998006030_MetadataUsageId;
+extern "C"  t4012695102 * m1998006030 (t319835859 * __this, t3525329789  p0, float p1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (m1998006030_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	t4012695102 * V_0 = NULL;
+	t1525280346 * V_1 = NULL;
+	t3227571696* V_2 = NULL;
+	t1809983122* V_3 = NULL;
+	{
+		t4012695102 * L_0 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
+		m3920833606(L_0, _stringLiteral1696563623, NULL);
+		V_0 = L_0;
+		t4012695102 * L_1 = V_0;
+		t284553113 * L_2 = m1278640159(L_1, NULL);
+		t284553113 * L_3 = m4257140443(__this, NULL);
+		m3231272063(L_2, L_3, NULL);
+		t4012695102 * L_4 = V_0;
+		t284553113 * L_5 = m1278640159(L_4, NULL);
+		t3525329789  L_6 = p0;
+		m3111394108(L_5, L_6, NULL);
+		t4012695102 * L_7 = V_0;
+		m638563702(L_7, m638563702_MI_var);
+		t4012695102 * L_8 = V_0;
+		m3074975883(L_8, m3074975883_MI_var);
+		t4012695102 * L_9 = V_0;
+		m4036826379(L_9, m4036826379_MI_var);
+		t1525280346 * L_10 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
+		m2684203808(L_10, NULL);
+		V_1 = L_10;
+		t4012695102 * L_11 = V_0;
+		t4177078322 * L_12 = m3315251873(L_11, m3315251873_MI_var);
+		t1525280346 * L_13 = V_1;
+		m1404580322(L_12, L_13, NULL);
+		V_2 = ((t3227571696*)SZArrayNew(t3227571696_TI_var, (uint32_t)5));
+		t3227571696* L_14 = V_2;
+		t3525329789  L_15;
+		memset(&L_15, 0, sizeof(L_15));
+		m2926210380(&L_15, (0.0f), (0.0f), (0.0f), NULL);
+		(*(t3525329789 *)((L_14)->GetAddressAt(static_cast<il2cpp_array_size_t>(0)))) = L_15;
+		t3227571696* L_16 = V_2;
+		t3525329789  L_17;
+		memset(&L_17, 0, sizeof(L_17));
+		m2926210380(&L_17, (10.0f), (0.0f), (0.0f), NULL);
+		(*(t3525329789 *)((L_16)->GetAddressAt(static_cast<il2cpp_array_size_t>(1)))) = L_17;
+		t3227571696* L_18 = V_2;
+		t3525329789  L_19;
+		memset(&L_19, 0, sizeof(L_19));
+		m2926210380(&L_19, (0.0f), (10.0f), (0.0f), NULL);
+		(*(t3525329789 *)((L_18)->GetAddressAt(static_cast<il2cpp_array_size_t>(2)))) = L_19;
+		t3227571696* L_20 = V_2;
+		t3525329789  L_21;
+		memset(&L_21, 0, sizeof(L_21));
+		m2926210380(&L_21, (0.0f), (0.0f), (10.0f), NULL);
+		(*(t3525329789 *)((L_20)->GetAddressAt(static_cast<il2cpp_array_size_t>(3)))) = L_21;
+		t3227571696* L_22 = V_2;
+		t3525329789  L_23;
+		memset(&L_23, 0, sizeof(L_23));
+		m2926210380(&L_23, (0.1f), (0.1f), (0.25f), NULL);
+		(*(t3525329789 *)((L_22)->GetAddressAt(static_cast<il2cpp_array_size_t>(4)))) = L_23;
+		V_3 = ((t1809983122*)SZArrayNew(t1809983122_TI_var, (uint32_t)((int32_t)18)));
+		t1809983122* L_24 = V_3;
+		(L_24)->SetAt(static_cast<il2cpp_array_size_t>(0), (int32_t)0);
+		t1809983122* L_25 = V_3;
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(1), (int32_t)1);
+		t1809983122* L_26 = V_3;
+		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(2), (int32_t)4);
+		t1809983122* L_27 = V_3;
+		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(3), (int32_t)0);
+		t1809983122* L_28 = V_3;
+		(L_28)->SetAt(static_cast<il2cpp_array_size_t>(4), (int32_t)4);
+		t1809983122* L_29 = V_3;
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(5), (int32_t)2);
+		t1809983122* L_30 = V_3;
+		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(6), (int32_t)0);
+		t1809983122* L_31 = V_3;
+		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(7), (int32_t)4);
+		t1809983122* L_32 = V_3;
+		(L_32)->SetAt(static_cast<il2cpp_array_size_t>(8), (int32_t)3);
+		t1809983122* L_33 = V_3;
+		(L_33)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)9)), (int32_t)0);
+		t1809983122* L_34 = V_3;
+		(L_34)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)10)), (int32_t)4);
+		t1809983122* L_35 = V_3;
+		(L_35)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)11)), (int32_t)1);
+		t1809983122* L_36 = V_3;
+		(L_36)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)12)), (int32_t)0);
+		t1809983122* L_37 = V_3;
+		(L_37)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)13)), (int32_t)2);
+		t1809983122* L_38 = V_3;
+		(L_38)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)14)), (int32_t)4);
+		t1809983122* L_39 = V_3;
+		(L_39)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)15)), (int32_t)0);
+		t1809983122* L_40 = V_3;
+		(L_40)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)16)), (int32_t)3);
+		t1809983122* L_41 = V_3;
+		(L_41)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)17)), (int32_t)4);
+		t1525280346 * L_42 = V_1;
+		t3227571696* L_43 = V_2;
+		m2628866109(L_42, L_43, NULL);
+		t1525280346 * L_44 = V_1;
+		t1809983122* L_45 = V_3;
+		m2341339867(L_44, L_45, NULL);
+		t4012695102 * L_46 = V_0;
+		t284553113 * L_47 = m1278640159(L_46, NULL);
+		float L_48 = p1;
+		float L_49 = p1;
+		float L_50 = p1;
+		t3525329789  L_51;
+		memset(&L_51, 0, sizeof(L_51));
+		m2926210380(&L_51, L_48, L_49, L_50, NULL);
+		m310756934(L_47, L_51, NULL);
+		t4012695102 * L_52 = V_0;
+		t509473927 * L_53 = m3966338038(L_52, m3966338038_MI_var);
+		m2650714328(L_53, NULL);
+		t3878351788 * L_54 = m2187391845(NULL, _stringLiteral1805297557, NULL);
+		__this->fs3(((t1886596500 *)IsInstClass(L_54, t1886596500_TI_var)));
+		t4012695102 * L_55 = V_0;
+		t1092684080 * L_56 = m4102086307(L_55, m4102086307_MI_var);
+		t1886596500 * L_57 = __this->fg3();
+		m1012580896(L_56, L_57, NULL);
+		t4012695102 * L_58 = V_0;
+		return L_58;
+	}
+}
 extern "C"  void m4285292089 (t83766130 * __this, const MethodInfo* method)
 {
 	{
+		__this->fs10((15.0f));
+		__this->fs11((15.0f));
 		m2022291967(__this, NULL);
 		return;
 	}
 }
+extern TypeInfo* t1886596500_TI_var;
 extern TypeInfo* t1244243154_TI_var;
 extern TypeInfo* t4012695102_TI_var;
 extern TypeInfo* t1525280346_TI_var;
 extern TypeInfo* t880701411_TI_var;
+extern const MethodInfo* m4102086307_MI_var;
 extern const MethodInfo* m638563702_MI_var;
 extern const MethodInfo* m3074975883_MI_var;
 extern const MethodInfo* m4036826379_MI_var;
@@ -3484,7 +3643,10 @@ extern const MethodInfo* m3315251873_MI_var;
 extern const MethodInfo* m3966338038_MI_var;
 extern const MethodInfo* m198913216_MI_var;
 extern const MethodInfo* m2994446665_MI_var;
+extern Il2CppCodeGenString* _stringLiteral3730892013;
+extern Il2CppCodeGenString* _stringLiteral2111573;
 extern Il2CppCodeGenString* _stringLiteral593854188;
+extern Il2CppCodeGenString* _stringLiteral1982636638;
 extern Il2CppCodeGenString* _stringLiteral3315523422;
 extern Il2CppCodeGenString* _stringLiteral942473321;
 extern const uint32_t m3232429881_MetadataUsageId;
@@ -3498,123 +3660,183 @@ extern "C"  void m3232429881 (t83766130 * __this, const MethodInfo* method)
 	}
 	t1244243154 * V_0 = NULL;
 	t1525280346 * V_1 = NULL;
+	t3525329789  V_2;
+	memset(&V_2, 0, sizeof(V_2));
 	{
-		t1244243154 * L_0 = (t1244243154 *)il2cpp_codegen_object_new(t1244243154_TI_var);
-		m2551614511(L_0, (10.0f), 4, (5.0f), (0.7f), NULL);
-		V_0 = L_0;
-		t4012695102 * L_1 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
-		m3920833606(L_1, _stringLiteral593854188, NULL);
-		__this->fs4(L_1);
-		t4012695102 * L_2 = __this->fg4();
-		t284553113 * L_3 = m1278640159(L_2, NULL);
-		t284553113 * L_4 = m4257140443(__this, NULL);
-		m3231272063(L_3, L_4, NULL);
-		t4012695102 * L_5 = __this->fg4();
-		m638563702(L_5, m638563702_MI_var);
+		t3878351788 * L_0 = m2187391845(NULL, _stringLiteral3730892013, NULL);
+		__this->fs13(((t1886596500 *)IsInstClass(L_0, t1886596500_TI_var)));
+		t4012695102 * L_1 = m332785498(NULL, _stringLiteral2111573, NULL);
+		t1092684080 * L_2 = m4102086307(L_1, m4102086307_MI_var);
+		t1886596500 * L_3 = __this->fg13();
+		m1012580896(L_2, L_3, NULL);
+		t1244243154 * L_4 = (t1244243154 *)il2cpp_codegen_object_new(t1244243154_TI_var);
+		m2551614511(L_4, (10.0f), 4, (3.0f), (0.7f), NULL);
+		V_0 = L_4;
+		t4012695102 * L_5 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
+		m3920833606(L_5, _stringLiteral593854188, NULL);
+		__this->fs4(L_5);
 		t4012695102 * L_6 = __this->fg4();
-		m3074975883(L_6, m3074975883_MI_var);
-		t4012695102 * L_7 = __this->fg4();
-		m4036826379(L_7, m4036826379_MI_var);
-		t1525280346 * L_8 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
-		m2684203808(L_8, NULL);
-		V_1 = L_8;
+		t284553113 * L_7 = m1278640159(L_6, NULL);
+		t284553113 * L_8 = m4257140443(__this, NULL);
+		m3231272063(L_7, L_8, NULL);
 		t4012695102 * L_9 = __this->fg4();
-		t4177078322 * L_10 = m3315251873(L_9, m3315251873_MI_var);
-		t1525280346 * L_11 = V_1;
-		m1404580322(L_10, L_11, NULL);
-		t1525280346 * L_12 = V_1;
-		t1244243154 * L_13 = V_0;
-		t3227571696* L_14 = m3727609118(L_13, NULL);
-		m2628866109(L_12, L_14, NULL);
+		m638563702(L_9, m638563702_MI_var);
+		t4012695102 * L_10 = __this->fg4();
+		m3074975883(L_10, m3074975883_MI_var);
+		t4012695102 * L_11 = __this->fg4();
+		m4036826379(L_11, m4036826379_MI_var);
+		t1525280346 * L_12 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
+		m2684203808(L_12, NULL);
+		V_1 = L_12;
+		t4012695102 * L_13 = __this->fg4();
+		t4177078322 * L_14 = m3315251873(L_13, m3315251873_MI_var);
 		t1525280346 * L_15 = V_1;
-		t1244243154 * L_16 = V_0;
-		t1809983122* L_17 = m2641371316(L_16, NULL);
-		m2341339867(L_15, L_17, NULL);
-		t1525280346 * L_18 = V_1;
-		m1806625021(L_18, NULL);
-		t4012695102 * L_19 = __this->fg4();
-		t509473927 * L_20 = m3966338038(L_19, m3966338038_MI_var);
-		m2650714328(L_20, NULL);
-		t880701411 * L_21 = (t880701411 *)il2cpp_codegen_object_new(t880701411_TI_var);
-		m1995341336(L_21, NULL);
-		__this->fs5(L_21);
-		t880701411 * L_22 = __this->fg5();
-		t1244243154 * L_23 = V_0;
-		m722365627(L_22, ((int32_t)50), (10.0f), L_23, NULL);
-		t4012695102 * L_24 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
-		m3920833606(L_24, _stringLiteral3315523422, NULL);
-		__this->fs3(L_24);
-		t4012695102 * L_25 = __this->fg3();
-		t284553113 * L_26 = m1278640159(L_25, NULL);
-		t284553113 * L_27 = m4257140443(__this, NULL);
-		m3231272063(L_26, L_27, NULL);
-		t4012695102 * L_28 = __this->fg3();
-		m638563702(L_28, m638563702_MI_var);
-		t4012695102 * L_29 = __this->fg3();
-		m3074975883(L_29, m3074975883_MI_var);
-		t4012695102 * L_30 = __this->fg3();
-		m4036826379(L_30, m4036826379_MI_var);
-		t1525280346 * L_31 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
-		m2684203808(L_31, NULL);
-		V_1 = L_31;
-		t4012695102 * L_32 = __this->fg3();
-		t4177078322 * L_33 = m3315251873(L_32, m3315251873_MI_var);
-		t1525280346 * L_34 = V_1;
-		m1404580322(L_33, L_34, NULL);
-		t1525280346 * L_35 = V_1;
-		t880701411 * L_36 = __this->fg5();
-		t3227571696* L_37 = m540941421(L_36, NULL);
-		m2628866109(L_35, L_37, NULL);
-		t1525280346 * L_38 = V_1;
-		t880701411 * L_39 = __this->fg5();
-		t1809983122* L_40 = m4219753965(L_39, NULL);
-		m2341339867(L_38, L_40, NULL);
-		t1525280346 * L_41 = V_1;
-		m1806625021(L_41, NULL);
-		t4012695102 * L_42 = __this->fg3();
-		t509473927 * L_43 = m3966338038(L_42, m3966338038_MI_var);
-		m2650714328(L_43, NULL);
-		t4012695102 * L_44 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
-		m3920833606(L_44, _stringLiteral942473321, NULL);
-		__this->fs3(L_44);
-		t4012695102 * L_45 = __this->fg3();
+		m1404580322(L_14, L_15, NULL);
+		t1525280346 * L_16 = V_1;
+		t1244243154 * L_17 = V_0;
+		t3227571696* L_18 = m3727609118(L_17, NULL);
+		m2628866109(L_16, L_18, NULL);
+		t1525280346 * L_19 = V_1;
+		t1244243154 * L_20 = V_0;
+		t1809983122* L_21 = m2641371316(L_20, NULL);
+		m2341339867(L_19, L_21, NULL);
+		t1525280346 * L_22 = V_1;
+		m1806625021(L_22, NULL);
+		t4012695102 * L_23 = __this->fg4();
+		t509473927 * L_24 = m3966338038(L_23, m3966338038_MI_var);
+		m2650714328(L_24, NULL);
+		t4012695102 * L_25 = __this->fg4();
+		t1092684080 * L_26 = m4102086307(L_25, m4102086307_MI_var);
+		t1886596500 * L_27 = __this->fg13();
+		m1012580896(L_26, L_27, NULL);
+		t4012695102 * L_28 = __this->fg4();
+		t509473927 * L_29 = m3966338038(L_28, m3966338038_MI_var);
+		t1588175760  L_30 = __this->fg12();
+		m1231589026(L_29, L_30, NULL);
+		t4012695102 * L_31 = __this->fg4();
+		m3538205401(L_31, (bool)0, NULL);
+		t4012695102 * L_32 = m332785498(NULL, _stringLiteral1982636638, NULL);
+		__this->fs7(L_32);
+		float L_33 = m3362417303(NULL, (0.0f), (10.0f), NULL);
+		float L_34 = m3362417303(NULL, (0.0f), (10.0f), NULL);
+		m2926210380((&V_2), L_33, (0.0f), L_34, NULL);
+		t1244243154 * L_35 = V_0;
+		float L_36 = (&V_2)->fg1();
+		float L_37 = (&V_2)->fg3();
+		float L_38 = m732806032(L_35, L_36, L_37, NULL);
+		(&V_2)->fs2(((float)((float)L_38+(float)(1.0f))));
+		t4012695102 * L_39 = __this->fg7();
+		t284553113 * L_40 = m1278640159(L_39, NULL);
+		t3525329789  L_41 = V_2;
+		m3111394108(L_40, L_41, NULL);
+		t4012695102 * L_42 = __this->fg7();
+		t284553113 * L_43 = m1278640159(L_42, NULL);
+		t3525329789  L_44;
+		memset(&L_44, 0, sizeof(L_44));
+		m2926210380(&L_44, (5.0f), (0.0f), (5.0f), NULL);
+		t4012695102 * L_45 = __this->fg7();
 		t284553113 * L_46 = m1278640159(L_45, NULL);
-		t284553113 * L_47 = m4257140443(__this, NULL);
-		m3231272063(L_46, L_47, NULL);
-		t4012695102 * L_48 = __this->fg3();
-		m638563702(L_48, m638563702_MI_var);
-		t4012695102 * L_49 = __this->fg3();
-		m3074975883(L_49, m3074975883_MI_var);
-		t1525280346 * L_50 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
-		m2684203808(L_50, NULL);
-		V_1 = L_50;
-		t4012695102 * L_51 = __this->fg3();
-		t4177078322 * L_52 = m3315251873(L_51, m3315251873_MI_var);
-		t1525280346 * L_53 = V_1;
-		m1404580322(L_52, L_53, NULL);
-		t1525280346 * L_54 = V_1;
-		t880701411 * L_55 = __this->fg5();
-		t3227571696* L_56 = m540941421(L_55, NULL);
-		m2628866109(L_54, L_56, NULL);
-		t1525280346 * L_57 = V_1;
-		t880701411 * L_58 = __this->fg5();
-		t1809983122* L_59 = m4219753965(L_58, NULL);
-		m2341339867(L_57, L_59, NULL);
-		t1525280346 * L_60 = V_1;
-		m1806625021(L_60, NULL);
-		t1525280346 * L_61 = V_1;
-		t1525280346 * L_62 = V_1;
-		t1809983122* L_63 = m2145908418(L_62, NULL);
-		Il2CppObject* L_64 = m198913216(NULL, (Il2CppObject*)(Il2CppObject*)L_63, m198913216_MI_var);
-		t1809983122* L_65 = m2994446665(NULL, L_64, m2994446665_MI_var);
-		m2341339867(L_61, L_65, NULL);
+		t3525329789  L_47 = m2211398607(L_46, NULL);
+		t3525329789  L_48 = m2842958165(NULL, L_44, L_47, NULL);
+		t3525329789  L_49 = m4046647141(NULL, NULL);
+		t1891715979  L_50 = m2869326048(NULL, L_48, L_49, NULL);
+		m3719981474(L_43, L_50, NULL);
+		t880701411 * L_51 = (t880701411 *)il2cpp_codegen_object_new(t880701411_TI_var);
+		m1995341336(L_51, NULL);
+		__this->fs5(L_51);
+		t880701411 * L_52 = __this->fg5();
+		t1244243154 * L_53 = V_0;
+		m722365627(L_52, ((int32_t)100), (10.0f), L_53, NULL);
+		t4012695102 * L_54 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
+		m3920833606(L_54, _stringLiteral3315523422, NULL);
+		__this->fs3(L_54);
+		t4012695102 * L_55 = __this->fg3();
+		t284553113 * L_56 = m1278640159(L_55, NULL);
+		t284553113 * L_57 = m4257140443(__this, NULL);
+		m3231272063(L_56, L_57, NULL);
+		t4012695102 * L_58 = __this->fg3();
+		m638563702(L_58, m638563702_MI_var);
+		t4012695102 * L_59 = __this->fg3();
+		m3074975883(L_59, m3074975883_MI_var);
+		t4012695102 * L_60 = __this->fg3();
+		m4036826379(L_60, m4036826379_MI_var);
+		t1525280346 * L_61 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
+		m2684203808(L_61, NULL);
+		V_1 = L_61;
+		t4012695102 * L_62 = __this->fg3();
+		t4177078322 * L_63 = m3315251873(L_62, m3315251873_MI_var);
+		t1525280346 * L_64 = V_1;
+		m1404580322(L_63, L_64, NULL);
+		t1525280346 * L_65 = V_1;
+		t880701411 * L_66 = __this->fg5();
+		t3227571696* L_67 = m540941421(L_66, NULL);
+		m2628866109(L_65, L_67, NULL);
+		t1525280346 * L_68 = V_1;
+		t880701411 * L_69 = __this->fg5();
+		t1809983122* L_70 = m4219753965(L_69, NULL);
+		m2341339867(L_68, L_70, NULL);
+		t1525280346 * L_71 = V_1;
+		m1806625021(L_71, NULL);
+		t4012695102 * L_72 = __this->fg3();
+		t509473927 * L_73 = m3966338038(L_72, m3966338038_MI_var);
+		t1588175760  L_74 = __this->fg12();
+		m1231589026(L_73, L_74, NULL);
+		t4012695102 * L_75 = __this->fg3();
+		t509473927 * L_76 = m3966338038(L_75, m3966338038_MI_var);
+		m2650714328(L_76, NULL);
+		t4012695102 * L_77 = __this->fg3();
+		t1092684080 * L_78 = m4102086307(L_77, m4102086307_MI_var);
+		t1886596500 * L_79 = __this->fg13();
+		m1012580896(L_78, L_79, NULL);
+		t4012695102 * L_80 = (t4012695102 *)il2cpp_codegen_object_new(t4012695102_TI_var);
+		m3920833606(L_80, _stringLiteral942473321, NULL);
+		__this->fs3(L_80);
+		t4012695102 * L_81 = __this->fg3();
+		t284553113 * L_82 = m1278640159(L_81, NULL);
+		t284553113 * L_83 = m4257140443(__this, NULL);
+		m3231272063(L_82, L_83, NULL);
+		t4012695102 * L_84 = __this->fg3();
+		m638563702(L_84, m638563702_MI_var);
+		t4012695102 * L_85 = __this->fg3();
+		m3074975883(L_85, m3074975883_MI_var);
+		t1525280346 * L_86 = (t1525280346 *)il2cpp_codegen_object_new(t1525280346_TI_var);
+		m2684203808(L_86, NULL);
+		V_1 = L_86;
+		t4012695102 * L_87 = __this->fg3();
+		t4177078322 * L_88 = m3315251873(L_87, m3315251873_MI_var);
+		t1525280346 * L_89 = V_1;
+		m1404580322(L_88, L_89, NULL);
+		t1525280346 * L_90 = V_1;
+		t880701411 * L_91 = __this->fg5();
+		t3227571696* L_92 = m540941421(L_91, NULL);
+		m2628866109(L_90, L_92, NULL);
+		t1525280346 * L_93 = V_1;
+		t880701411 * L_94 = __this->fg5();
+		t1809983122* L_95 = m4219753965(L_94, NULL);
+		m2341339867(L_93, L_95, NULL);
+		t1525280346 * L_96 = V_1;
+		m1806625021(L_96, NULL);
+		t1525280346 * L_97 = V_1;
+		t1525280346 * L_98 = V_1;
+		t1809983122* L_99 = m2145908418(L_98, NULL);
+		Il2CppObject* L_100 = m198913216(NULL, (Il2CppObject*)(Il2CppObject*)L_99, m198913216_MI_var);
+		t1809983122* L_101 = m2994446665(NULL, L_100, m2994446665_MI_var);
+		m2341339867(L_97, L_101, NULL);
+		t4012695102 * L_102 = __this->fg3();
+		t1092684080 * L_103 = m4102086307(L_102, m4102086307_MI_var);
+		t1886596500 * L_104 = __this->fg13();
+		m1012580896(L_103, L_104, NULL);
 		return;
 	}
 }
 extern TypeInfo* t1593691127_TI_var;
 extern TypeInfo* t1588791936_TI_var;
+extern TypeInfo* t1597001355_TI_var;
 extern Il2CppCodeGenString* _stringLiteral109;
 extern Il2CppCodeGenString* _stringLiteral3492294666;
+extern Il2CppCodeGenString* _stringLiteral2111573;
+extern Il2CppCodeGenString* _stringLiteral2907718525;
+extern Il2CppCodeGenString* _stringLiteral2907718526;
 extern const uint32_t m1426930676_MetadataUsageId;
 extern "C"  void m1426930676 (t83766130 * __this, const MethodInfo* method)
 {
@@ -3624,6 +3846,14 @@ extern "C"  void m1426930676 (t83766130 * __this, const MethodInfo* method)
 		il2cpp_codegen_initialize_method (m1426930676_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
+	t1891715979  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	t1891715979  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	t3525329789  V_2;
+	memset(&V_2, 0, sizeof(V_2));
+	t3525329789  V_3;
+	memset(&V_3, 0, sizeof(V_3));
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
 		bool L_0 = m2673079080(NULL, _stringLiteral109, NULL);
@@ -3651,6 +3881,107 @@ IL_0014:
 	}
 
 IL_002e:
+	{
+		t4012695102 * L_3 = m332785498(NULL, _stringLiteral2111573, NULL);
+		t284553113 * L_4 = m1278640159(L_3, NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
+		t3852595506 * L_5 = m443992808(NULL, NULL);
+		t1891715979  L_6 = m822764265(L_5, NULL);
+		m1525803229(L_4, L_6, NULL);
+		bool L_7 = m2031691843(NULL, 0, NULL);
+		if (!L_7)
+		{
+			goto IL_008a;
+		}
+	}
+	{
+		__this->fs6((bool)1);
+		t4012695102 * L_8 = __this->fg7();
+		t284553113 * L_9 = m1278640159(L_8, NULL);
+		t1891715979  L_10 = m3343229381(L_9, NULL);
+		__this->fs18(L_10);
+		__this->fs8((0.0f));
+		__this->fs9((0.0f));
+	}
+
+IL_008a:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
+		bool L_11 = m2588144188(NULL, 0, NULL);
+		if (!L_11)
+		{
+			goto IL_009c;
+		}
+	}
+	{
+		__this->fs6((bool)0);
+	}
+
+IL_009c:
+	{
+		bool L_12 = __this->fg6();
+		if (!L_12)
+		{
+			goto IL_01c6;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
+		float L_13 = m1900207208(NULL, _stringLiteral2907718525, NULL);
+		__this->fs16(L_13);
+		float L_14 = m1900207208(NULL, _stringLiteral2907718526, NULL);
+		__this->fs17(L_14);
+		float L_15 = __this->fg14();
+		float L_16 = __this->fg16();
+		IL2CPP_RUNTIME_CLASS_INIT(t1597001355_TI_var);
+		float L_17 = m3257777633(NULL, L_15, L_16, (0.333333343f), NULL);
+		__this->fs14(L_17);
+		float L_18 = __this->fg15();
+		float L_19 = __this->fg17();
+		float L_20 = m3257777633(NULL, L_18, L_19, (0.333333343f), NULL);
+		__this->fs15(L_20);
+		float L_21 = __this->fg8();
+		float L_22 = __this->fg14();
+		float L_23 = __this->fg10();
+		__this->fs8(((float)((float)L_21+(float)((float)((float)L_22*(float)L_23)))));
+		float L_24 = __this->fg9();
+		float L_25 = __this->fg15();
+		float L_26 = __this->fg11();
+		__this->fs9(((float)((float)L_24+(float)((float)((float)L_25*(float)L_26)))));
+		float L_27 = __this->fg8();
+		t3525329789  L_28 = m4046647141(NULL, NULL);
+		t1891715979  L_29 = m644124247(NULL, L_27, L_28, NULL);
+		V_0 = L_29;
+		float L_30 = __this->fg9();
+		t3525329789  L_31 = m4015137012(NULL, NULL);
+		t3525329789  L_32 = m3293197314(NULL, L_31, NULL);
+		t1891715979  L_33 = m644124247(NULL, L_30, L_32, NULL);
+		V_1 = L_33;
+		t4012695102 * L_34 = __this->fg7();
+		t284553113 * L_35 = m1278640159(L_34, NULL);
+		t1891715979  L_36 = __this->fg18();
+		t1891715979  L_37 = V_0;
+		t1891715979  L_38 = m3077481361(NULL, L_36, L_37, NULL);
+		t1891715979  L_39 = V_1;
+		t1891715979  L_40 = m3077481361(NULL, L_38, L_39, NULL);
+		m3719981474(L_35, L_40, NULL);
+		t4012695102 * L_41 = __this->fg7();
+		t284553113 * L_42 = m1278640159(L_41, NULL);
+		t4012695102 * L_43 = __this->fg7();
+		t284553113 * L_44 = m1278640159(L_43, NULL);
+		t3525329789  L_45 = m1058084741(L_44, NULL);
+		V_2 = L_45;
+		float L_46 = (&V_2)->fg1();
+		t4012695102 * L_47 = __this->fg7();
+		t284553113 * L_48 = m1278640159(L_47, NULL);
+		t3525329789  L_49 = m1058084741(L_48, NULL);
+		V_3 = L_49;
+		float L_50 = (&V_3)->fg2();
+		t1891715979  L_51 = m1204688217(NULL, L_46, L_50, (0.0f), NULL);
+		m3719981474(L_42, L_51, NULL);
+	}
+
+IL_01c6:
 	{
 		return;
 	}

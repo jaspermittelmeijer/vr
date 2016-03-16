@@ -13,11 +13,13 @@
 #include <limits>
 #include <assert.h>
 
+struct t1072804841;
+struct t284553113;
+struct Il2CppObject;
 struct t3148635335;
 struct String_t;
 struct t1967233988;
 struct t11523773;
-struct Il2CppObject;
 struct t1917318876;
 struct t896427542;
 struct t1291133240;
@@ -35,6 +37,15 @@ struct t471424957;
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "Il2CppArray.h"
+#include "t1072804841.h"
+#include "t1072804841MD.h"
+#include "t284553113.h"
+#include "t2779279689.h"
+#include "Il2CppObjectMD.h"
+#include "t2847414787.h"
+#include "Il2CppObject.h"
+#include "t284553113MD.h"
+#include "t211005341.h"
 #include "t403820581.h"
 #include "t403820581MD.h"
 #include "t3525329788.h"
@@ -43,7 +54,6 @@ struct t471424957;
 #include "t156921283MD.h"
 #include "t2260061605.h"
 #include "t2260061605MD.h"
-#include "t2779279689.h"
 #include "t4137084207MD.h"
 #include "t3525329790MD.h"
 #include "t3525329789MD.h"
@@ -56,17 +66,14 @@ struct t471424957;
 #include "t3148635335MD.h"
 #include "t1967233988MD.h"
 #include "String_t.h"
-#include "t2847414787.h"
 #include "t1967233988.h"
 #include "t963216403.h"
 #include "t963216403MD.h"
 #include "mscorlib_ArrayTypes.h"
-#include "Il2CppObject.h"
 #include "String_tMD.h"
 #include "t3760259642MD.h"
 #include "t3760259642.h"
 #include "t958209021MD.h"
-#include "t211005341.h"
 #include "t1597001355MD.h"
 #include "t2656823056.h"
 #include "t2656823056MD.h"
@@ -83,7 +90,6 @@ struct t471424957;
 #include "t1716006665.h"
 #include "t1716006665MD.h"
 #include "t3557331758.h"
-#include "Il2CppObjectMD.h"
 #include "t2344941421.h"
 #include "t2344941421MD.h"
 #include "t1623036922MD.h"
@@ -108,6 +114,49 @@ struct t471424957;
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+extern "C"  void m856668951 (t1072804841 * __this, t284553113 * p0, const MethodInfo* method)
+{
+	{
+		__this->fs1((-1));
+		m1772956182(__this, NULL);
+		t284553113 * L_0 = p0;
+		__this->fs0(L_0);
+		return;
+	}
+}
+extern "C"  Il2CppObject * m1838268607 (t1072804841 * __this, const MethodInfo* method)
+{
+	{
+		t284553113 * L_0 = __this->fg0();
+		int32_t L_1 = __this->fg1();
+		t284553113 * L_2 = m4040462992(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+extern "C"  bool m1095530856 (t1072804841 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	{
+		t284553113 * L_0 = __this->fg0();
+		int32_t L_1 = m2107810675(L_0, NULL);
+		V_0 = L_1;
+		int32_t L_2 = __this->fg1();
+		int32_t L_3 = ((int32_t)((int32_t)L_2+(int32_t)1));
+		V_1 = L_3;
+		__this->fs1(L_3);
+		int32_t L_4 = V_1;
+		int32_t L_5 = V_0;
+		return (bool)((((int32_t)L_4) < ((int32_t)L_5))? 1 : 0);
+	}
+}
+extern "C"  void m258411155 (t1072804841 * __this, const MethodInfo* method)
+{
+	{
+		__this->fs1((-1));
+		return;
+	}
+}
 // Conversion methods for marshalling of: UnityEngine.UICharInfo
 extern "C" void t403820581_marshal(const t403820581& unmarshaled, t403820581_marshaled& marshaled)
 {
@@ -1378,6 +1427,18 @@ extern "C"  t3525329789  m2842958165 (Il2CppObject * __this , t3525329789  p0, t
 		memset(&L_6, 0, sizeof(L_6));
 		m2926210380(&L_6, ((float)((float)L_0-(float)L_1)), ((float)((float)L_2-(float)L_3)), ((float)((float)L_4-(float)L_5)), NULL);
 		return L_6;
+	}
+}
+extern "C"  t3525329789  m3293197314 (Il2CppObject * __this , t3525329789  p0, const MethodInfo* method)
+{
+	{
+		float L_0 = (&p0)->fg1();
+		float L_1 = (&p0)->fg2();
+		float L_2 = (&p0)->fg3();
+		t3525329789  L_3;
+		memset(&L_3, 0, sizeof(L_3));
+		m2926210380(&L_3, ((-L_0)), ((-L_1)), ((-L_2)), NULL);
+		return L_3;
 	}
 }
 extern "C"  t3525329789  m973638459 (Il2CppObject * __this , t3525329789  p0, float p1, const MethodInfo* method)

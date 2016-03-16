@@ -226,6 +226,7 @@ UnityEngine.GUIUtility::get_systemCopyBuffer
 UnityEngine.GUIUtility::Internal_ExitGUI
 UnityEngine.GUIUtility::set_systemCopyBuffer
 UnityEngine.GUIUtility::Internal_GetDefaultSkin
+UnityEngine.Gyroscope::INTERNAL_CALL_attitude_Internal
 UnityEngine.Input::GetButtonDown
 UnityEngine.Input::GetKeyDownString
 UnityEngine.Input::GetMouseButton
@@ -233,6 +234,7 @@ UnityEngine.Input::GetMouseButtonDown
 UnityEngine.Input::GetMouseButtonUp
 UnityEngine.Input::get_mousePresent
 UnityEngine.Input::get_touchCount
+UnityEngine.Input::mainGyroIndex_Internal
 UnityEngine.Input::GetAxisRaw
 UnityEngine.Input::get_compositionString
 UnityEngine.Input::INTERNAL_get_mousePosition
@@ -304,7 +306,11 @@ UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast
 UnityEngine.Physics::INTERNAL_CALL_RaycastAll
 UnityEngine.Physics2D::INTERNAL_CALL_Internal_Raycast
 UnityEngine.Physics2D::INTERNAL_CALL_RaycastAll
+UnityEngine.Quaternion::INTERNAL_CALL_AngleAxis
+UnityEngine.Quaternion::INTERNAL_CALL_Internal_FromEulerRad
+UnityEngine.Quaternion::INTERNAL_CALL_Internal_ToEulerRad
 UnityEngine.Quaternion::INTERNAL_CALL_Inverse
+UnityEngine.Quaternion::INTERNAL_CALL_LookRotation
 UnityEngine.Random::RandomRangeInt
 UnityEngine.Random::Range
 UnityEngine.Random::get_value
@@ -336,6 +342,7 @@ UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustPoint
 UnityEngine.RectTransformUtility::INTERNAL_CALL_PixelAdjustRect
 UnityEngine.Renderer::get_sortingLayerID
 UnityEngine.Renderer::get_sortingOrder
+UnityEngine.Renderer::set_material
 UnityEngine.RenderTexture::Internal_GetHeight
 UnityEngine.RenderTexture::Internal_GetWidth
 UnityEngine.Resources::Load
@@ -389,6 +396,7 @@ UnityEngine.Transform::INTERNAL_set_localPosition
 UnityEngine.Transform::INTERNAL_set_localRotation
 UnityEngine.Transform::INTERNAL_set_localScale
 UnityEngine.Transform::INTERNAL_set_position
+UnityEngine.Transform::INTERNAL_set_rotation
 UnityEngine.Transform::SetAsFirstSibling
 UnityEngine.Transform::SetParent
 UnityEngine.Transform::set_parentInternal

@@ -11,6 +11,7 @@
 #include <stdint.h>
 
 struct t4012695102;
+struct t1886596500;
 
 #include "t3012272455.h"
 
@@ -24,6 +25,7 @@ struct  t319835859  : public t3012272455
 {
 public:
 	t4012695102 * f2;
+	t1886596500 * f3;
 
 public:
 	inline static int32_t fog2() { return static_cast<int32_t>(offsetof(t319835859, f2)); }
@@ -33,6 +35,15 @@ public:
 	{
 		f2 = value;
 		Il2CppCodeGenWriteBarrier(&f2, value);
+	}
+
+	inline static int32_t fog3() { return static_cast<int32_t>(offsetof(t319835859, f3)); }
+	inline t1886596500 * fg3() const { return f3; }
+	inline t1886596500 ** fag3() { return &f3; }
+	inline void fs3(t1886596500 * value)
+	{
+		f3 = value;
+		Il2CppCodeGenWriteBarrier(&f3, value);
 	}
 };
 

@@ -37083,6 +37083,34 @@ void t1525280346_CustomAttributesCacheGenerator_m637494532(CustomAttributesCache
 	}
 }
 extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t1092684080_CustomAttributesCacheGenerator_m1012580896_MetadataUsageId;
+void t1092684080_CustomAttributesCacheGenerator_m1012580896(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1092684080_CustomAttributesCacheGenerator_m1012580896_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
 extern const uint32_t t1092684080_CustomAttributesCacheGenerator_m1954594923_MetadataUsageId;
 void t1092684080_CustomAttributesCacheGenerator_m1954594923(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -38462,8 +38490,8 @@ void t1862190090_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		typeCache->attributeTypes[0] = t1800197956_TI_var;
 	}
 }
-extern TypeInfo* t1800197956_TI_var;
 extern TypeInfo* t627281679_TI_var;
+extern TypeInfo* t1800197956_TI_var;
 extern const uint32_t t3525329788_CustomAttributesCacheGenerator_MetadataUsageId;
 void t3525329788_CustomAttributesCacheGenerator(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -38478,15 +38506,15 @@ void t3525329788_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t1800197956 * tmp;
-			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
-			m3320039756(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t627281679 * tmp;
 			tmp = (t627281679 *)il2cpp_codegen_object_new (t627281679_TI_var);
 			m66421301(tmp, il2cpp_codegen_string_new_wrapper("Item"), NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t1800197956 * tmp;
+			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
+			m3320039756(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -38494,8 +38522,8 @@ void t3525329788_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t1800197956_TI_var;
-		typeCache->attributeTypes[1] = t627281679_TI_var;
+		typeCache->attributeTypes[0] = t627281679_TI_var;
+		typeCache->attributeTypes[1] = t1800197956_TI_var;
 	}
 }
 extern TypeInfo* t627281679_TI_var;
@@ -38608,6 +38636,90 @@ void t1891715979_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 	}
 }
 extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t1891715979_CustomAttributesCacheGenerator_m1562314763_MetadataUsageId;
+void t1891715979_CustomAttributesCacheGenerator_m1562314763(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1891715979_CustomAttributesCacheGenerator_m1562314763_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t116041064_TI_var;
+extern const uint32_t t1891715979_CustomAttributesCacheGenerator_t1891715979_m2869326048_Arg1_ParameterInfo_MetadataUsageId;
+void t1891715979_CustomAttributesCacheGenerator_t1891715979_m2869326048_Arg1_ParameterInfo(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1891715979_CustomAttributesCacheGenerator_t1891715979_m2869326048_Arg1_ParameterInfo_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t116041064 * tmp;
+			tmp = (t116041064 *)il2cpp_codegen_object_new (t116041064_TI_var);
+			m1665393712(tmp, il2cpp_codegen_string_new_wrapper("Vector3.up"), NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t116041064_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t1891715979_CustomAttributesCacheGenerator_m1501255504_MetadataUsageId;
+void t1891715979_CustomAttributesCacheGenerator_m1501255504(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1891715979_CustomAttributesCacheGenerator_m1501255504_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
 extern const uint32_t t1891715979_CustomAttributesCacheGenerator_m4175627710_MetadataUsageId;
 void t1891715979_CustomAttributesCacheGenerator_m4175627710(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -38615,6 +38727,62 @@ void t1891715979_CustomAttributesCacheGenerator_m4175627710(CustomAttributesCach
 	if (!s_Il2CppMethodIntialized)
 	{
 		il2cpp_codegen_initialize_method (t1891715979_CustomAttributesCacheGenerator_m4175627710_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t1891715979_CustomAttributesCacheGenerator_m1660134351_MetadataUsageId;
+void t1891715979_CustomAttributesCacheGenerator_m1660134351(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1891715979_CustomAttributesCacheGenerator_m1660134351_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t1891715979_CustomAttributesCacheGenerator_m1312441940_MetadataUsageId;
+void t1891715979_CustomAttributesCacheGenerator_m1312441940(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1891715979_CustomAttributesCacheGenerator_m1312441940_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	if (cache)
@@ -38663,8 +38831,8 @@ void t1525428817_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		typeCache->attributeTypes[0] = t1800197956_TI_var;
 	}
 }
-extern TypeInfo* t627281679_TI_var;
 extern TypeInfo* t1800197956_TI_var;
+extern TypeInfo* t627281679_TI_var;
 extern const uint32_t t277289660_CustomAttributesCacheGenerator_MetadataUsageId;
 void t277289660_CustomAttributesCacheGenerator(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -38679,15 +38847,15 @@ void t277289660_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cus
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t627281679 * tmp;
-			tmp = (t627281679 *)il2cpp_codegen_object_new (t627281679_TI_var);
-			m66421301(tmp, il2cpp_codegen_string_new_wrapper("Item"), NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t1800197956 * tmp;
 			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
 			m3320039756(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t627281679 * tmp;
+			tmp = (t627281679 *)il2cpp_codegen_object_new (t627281679_TI_var);
+			m66421301(tmp, il2cpp_codegen_string_new_wrapper("Item"), NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -38695,8 +38863,8 @@ void t277289660_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cus
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t627281679_TI_var;
-		typeCache->attributeTypes[1] = t1800197956_TI_var;
+		typeCache->attributeTypes[0] = t1800197956_TI_var;
+		typeCache->attributeTypes[1] = t627281679_TI_var;
 	}
 }
 extern TypeInfo* t1800197956_TI_var;
@@ -38727,8 +38895,8 @@ void t3518514978_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		typeCache->attributeTypes[0] = t1800197956_TI_var;
 	}
 }
-extern TypeInfo* t1800197956_TI_var;
 extern TypeInfo* t627281679_TI_var;
+extern TypeInfo* t1800197956_TI_var;
 extern const uint32_t t3525329790_CustomAttributesCacheGenerator_MetadataUsageId;
 void t3525329790_CustomAttributesCacheGenerator(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -38743,15 +38911,15 @@ void t3525329790_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t1800197956 * tmp;
-			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
-			m3320039756(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t627281679 * tmp;
 			tmp = (t627281679 *)il2cpp_codegen_object_new (t627281679_TI_var);
 			m66421301(tmp, il2cpp_codegen_string_new_wrapper("Item"), NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t1800197956 * tmp;
+			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
+			m3320039756(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -38759,8 +38927,8 @@ void t3525329790_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t1800197956_TI_var;
-		typeCache->attributeTypes[1] = t627281679_TI_var;
+		typeCache->attributeTypes[0] = t627281679_TI_var;
+		typeCache->attributeTypes[1] = t1800197956_TI_var;
 	}
 }
 extern TypeInfo* t116041064_TI_var;
@@ -41840,6 +42008,62 @@ void t3012272455_CustomAttributesCacheGenerator_m589898551(CustomAttributesCache
 	}
 }
 extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t3852595506_CustomAttributesCacheGenerator_m2063094673_MetadataUsageId;
+void t3852595506_CustomAttributesCacheGenerator_m2063094673(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t3852595506_CustomAttributesCacheGenerator_m2063094673_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t1593691127_CustomAttributesCacheGenerator_m2784798663_MetadataUsageId;
+void t1593691127_CustomAttributesCacheGenerator_m2784798663(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t1593691127_CustomAttributesCacheGenerator_m2784798663_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
 extern const uint32_t t1593691127_CustomAttributesCacheGenerator_m3636305303_MetadataUsageId;
 void t1593691127_CustomAttributesCacheGenerator_m3636305303(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -42807,8 +43031,8 @@ void t3878351788_CustomAttributesCacheGenerator_m2168852346(CustomAttributesCach
 		typeCache->attributeTypes[1] = t699313272_TI_var;
 	}
 }
-extern TypeInfo* t4003675496_TI_var;
 extern TypeInfo* t699313272_TI_var;
+extern TypeInfo* t4003675496_TI_var;
 extern const uint32_t t3878351788_CustomAttributesCacheGenerator_m1276784656_MetadataUsageId;
 void t3878351788_CustomAttributesCacheGenerator_m1276784656(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -42823,15 +43047,15 @@ void t3878351788_CustomAttributesCacheGenerator_m1276784656(CustomAttributesCach
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t4003675496 * tmp;
-			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
-			m1888400594(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t699313272 * tmp;
 			tmp = (t699313272 *)il2cpp_codegen_object_new (t699313272_TI_var);
 			m4069910548(tmp, il2cpp_codegen_string_new_wrapper("use Resources.FindObjectsOfTypeAll instead."), NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -42839,8 +43063,8 @@ void t3878351788_CustomAttributesCacheGenerator_m1276784656(CustomAttributesCach
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t4003675496_TI_var;
-		typeCache->attributeTypes[1] = t699313272_TI_var;
+		typeCache->attributeTypes[0] = t699313272_TI_var;
+		typeCache->attributeTypes[1] = t4003675496_TI_var;
 	}
 }
 extern TypeInfo* t4003675496_TI_var;
@@ -43907,8 +44131,8 @@ void t2126946602_CustomAttributesCacheGenerator_m2857110644(CustomAttributesCach
 		typeCache->attributeTypes[0] = t2739928377_TI_var;
 	}
 }
-extern TypeInfo* t471424957_TI_var;
 extern TypeInfo* t4003675496_TI_var;
+extern TypeInfo* t471424957_TI_var;
 extern const uint32_t t4012695102_CustomAttributesCacheGenerator_m1004814461_MetadataUsageId;
 void t4012695102_CustomAttributesCacheGenerator_m1004814461(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -43923,15 +44147,15 @@ void t4012695102_CustomAttributesCacheGenerator_m1004814461(CustomAttributesCach
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t471424957 * tmp;
-			tmp = (t471424957 *)il2cpp_codegen_object_new (t471424957_TI_var);
-			m1168575159(tmp, 0, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t4003675496 * tmp;
 			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
 			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t471424957 * tmp;
+			tmp = (t471424957 *)il2cpp_codegen_object_new (t471424957_TI_var);
+			m1168575159(tmp, 0, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -43939,8 +44163,8 @@ void t4012695102_CustomAttributesCacheGenerator_m1004814461(CustomAttributesCach
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t471424957_TI_var;
-		typeCache->attributeTypes[1] = t4003675496_TI_var;
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+		typeCache->attributeTypes[1] = t471424957_TI_var;
 	}
 }
 extern TypeInfo* t2130178741_TI_var;
@@ -43971,8 +44195,8 @@ void t4012695102_CustomAttributesCacheGenerator_m2159947790(CustomAttributesCach
 		typeCache->attributeTypes[0] = t2130178741_TI_var;
 	}
 }
-extern TypeInfo* t471424957_TI_var;
 extern TypeInfo* t4003675496_TI_var;
+extern TypeInfo* t471424957_TI_var;
 extern const uint32_t t4012695102_CustomAttributesCacheGenerator_m1490154500_MetadataUsageId;
 void t4012695102_CustomAttributesCacheGenerator_m1490154500(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -43987,15 +44211,15 @@ void t4012695102_CustomAttributesCacheGenerator_m1490154500(CustomAttributesCach
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t471424957 * tmp;
-			tmp = (t471424957 *)il2cpp_codegen_object_new (t471424957_TI_var);
-			m1168575159(tmp, 0, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t4003675496 * tmp;
 			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
 			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t471424957 * tmp;
+			tmp = (t471424957 *)il2cpp_codegen_object_new (t471424957_TI_var);
+			m1168575159(tmp, 0, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -44003,8 +44227,8 @@ void t4012695102_CustomAttributesCacheGenerator_m1490154500(CustomAttributesCach
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t471424957_TI_var;
-		typeCache->attributeTypes[1] = t4003675496_TI_var;
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+		typeCache->attributeTypes[1] = t471424957_TI_var;
 	}
 }
 extern TypeInfo* t2739928377_TI_var;
@@ -44751,6 +44975,34 @@ void t284553113_CustomAttributesCacheGenerator_m2389720173(CustomAttributesCache
 	if (!s_Il2CppMethodIntialized)
 	{
 		il2cpp_codegen_initialize_method (t284553113_CustomAttributesCacheGenerator_m2389720173_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	if (cache)
+	{
+		cache->count = 1;
+		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
+		{
+			t4003675496 * tmp;
+			tmp = (t4003675496 *)il2cpp_codegen_object_new (t4003675496_TI_var);
+			m1888400594(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+	}
+	if (typeCache)
+	{
+		typeCache->count = 1;
+		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
+		typeCache->attributeTypes[0] = t4003675496_TI_var;
+	}
+}
+extern TypeInfo* t4003675496_TI_var;
+extern const uint32_t t284553113_CustomAttributesCacheGenerator_m2051942009_MetadataUsageId;
+void t284553113_CustomAttributesCacheGenerator_m2051942009(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (t284553113_CustomAttributesCacheGenerator_m2051942009_MetadataUsageId);
 		s_Il2CppMethodIntialized = true;
 	}
 	if (cache)
@@ -50203,8 +50455,8 @@ void t1668697771_CustomAttributesCacheGenerator_m2094683006(CustomAttributesCach
 		typeCache->attributeTypes[0] = t4003675496_TI_var;
 	}
 }
-extern TypeInfo* t641452194_TI_var;
 extern TypeInfo* t2676812948_TI_var;
+extern TypeInfo* t641452194_TI_var;
 extern const uint32_t t2614611333_CustomAttributesCacheGenerator_MetadataUsageId;
 void t2614611333_CustomAttributesCacheGenerator(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -50219,15 +50471,15 @@ void t2614611333_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t641452194 * tmp;
-			tmp = (t641452194 *)il2cpp_codegen_object_new (t641452194_TI_var);
-			m940065582(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t2676812948 * tmp;
 			tmp = (t2676812948 *)il2cpp_codegen_object_new (t2676812948_TI_var);
 			m1394231890(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t641452194 * tmp;
+			tmp = (t641452194 *)il2cpp_codegen_object_new (t641452194_TI_var);
+			m940065582(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -50235,8 +50487,8 @@ void t2614611333_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t641452194_TI_var;
-		typeCache->attributeTypes[1] = t2676812948_TI_var;
+		typeCache->attributeTypes[0] = t2676812948_TI_var;
+		typeCache->attributeTypes[1] = t641452194_TI_var;
 	}
 }
 extern TypeInfo* t3430139495_TI_var;
@@ -53153,8 +53405,8 @@ void t3196495237_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		typeCache->attributeTypes[0] = t1025395500_TI_var;
 	}
 }
-extern TypeInfo* t1800197956_TI_var;
 extern TypeInfo* t627281679_TI_var;
+extern TypeInfo* t1800197956_TI_var;
 extern const uint32_t t1588175760_CustomAttributesCacheGenerator_MetadataUsageId;
 void t1588175760_CustomAttributesCacheGenerator(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -53169,15 +53421,15 @@ void t1588175760_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t1800197956 * tmp;
-			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
-			m3320039756(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t627281679 * tmp;
 			tmp = (t627281679 *)il2cpp_codegen_object_new (t627281679_TI_var);
 			m66421301(tmp, il2cpp_codegen_string_new_wrapper("Item"), NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t1800197956 * tmp;
+			tmp = (t1800197956 *)il2cpp_codegen_object_new (t1800197956_TI_var);
+			m3320039756(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -53185,8 +53437,8 @@ void t1588175760_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t1800197956_TI_var;
-		typeCache->attributeTypes[1] = t627281679_TI_var;
+		typeCache->attributeTypes[0] = t627281679_TI_var;
+		typeCache->attributeTypes[1] = t1800197956_TI_var;
 	}
 }
 extern TypeInfo* t641452194_TI_var;
@@ -53602,8 +53854,8 @@ void t3762183996_CustomAttributesCacheGenerator_m3541316899(CustomAttributesCach
 		typeCache->attributeTypes[0] = t641452194_TI_var;
 	}
 }
-extern TypeInfo* t2130178741_TI_var;
 extern TypeInfo* t641452194_TI_var;
+extern TypeInfo* t2130178741_TI_var;
 extern const uint32_t t3762183996_CustomAttributesCacheGenerator_m235366505_MetadataUsageId;
 void t3762183996_CustomAttributesCacheGenerator_m235366505(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -53618,15 +53870,15 @@ void t3762183996_CustomAttributesCacheGenerator_m235366505(CustomAttributesCache
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t2130178741 * tmp;
-			tmp = (t2130178741 *)il2cpp_codegen_object_new (t2130178741_TI_var);
-			m4074397875(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t641452194 * tmp;
 			tmp = (t641452194 *)il2cpp_codegen_object_new (t641452194_TI_var);
 			m940065582(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t2130178741 * tmp;
+			tmp = (t2130178741 *)il2cpp_codegen_object_new (t2130178741_TI_var);
+			m4074397875(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -53634,8 +53886,8 @@ void t3762183996_CustomAttributesCacheGenerator_m235366505(CustomAttributesCache
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t2130178741_TI_var;
-		typeCache->attributeTypes[1] = t641452194_TI_var;
+		typeCache->attributeTypes[0] = t641452194_TI_var;
+		typeCache->attributeTypes[1] = t2130178741_TI_var;
 	}
 }
 extern TypeInfo* t2130178741_TI_var;
@@ -53823,8 +54075,8 @@ void t1035456276_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		typeCache->attributeTypes[0] = t641452194_TI_var;
 	}
 }
-extern TypeInfo* t3430139495_TI_var;
 extern TypeInfo* t581346955_TI_var;
+extern TypeInfo* t3430139495_TI_var;
 extern const uint32_t t2732610389_CustomAttributesCacheGenerator_m_ObjectArgument_MetadataUsageId;
 void t2732610389_CustomAttributesCacheGenerator_m_ObjectArgument(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -53839,15 +54091,15 @@ void t2732610389_CustomAttributesCacheGenerator_m_ObjectArgument(CustomAttribute
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t3430139495 * tmp;
-			tmp = (t3430139495 *)il2cpp_codegen_object_new (t3430139495_TI_var);
-			m4068807987(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t581346955 * tmp;
 			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
 			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("objectArgument"), NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t3430139495 * tmp;
+			tmp = (t3430139495 *)il2cpp_codegen_object_new (t3430139495_TI_var);
+			m4068807987(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -53855,8 +54107,8 @@ void t2732610389_CustomAttributesCacheGenerator_m_ObjectArgument(CustomAttribute
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t3430139495_TI_var;
-		typeCache->attributeTypes[1] = t581346955_TI_var;
+		typeCache->attributeTypes[0] = t581346955_TI_var;
+		typeCache->attributeTypes[1] = t3430139495_TI_var;
 	}
 }
 extern TypeInfo* t3430139495_TI_var;
@@ -54031,8 +54283,8 @@ void t2732610389_CustomAttributesCacheGenerator_m_BoolArgument(CustomAttributesC
 		typeCache->attributeTypes[0] = t3430139495_TI_var;
 	}
 }
-extern TypeInfo* t581346955_TI_var;
 extern TypeInfo* t3430139495_TI_var;
+extern TypeInfo* t581346955_TI_var;
 extern const uint32_t t4127144549_CustomAttributesCacheGenerator_m_Target_MetadataUsageId;
 void t4127144549_CustomAttributesCacheGenerator_m_Target(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -54047,15 +54299,15 @@ void t4127144549_CustomAttributesCacheGenerator_m_Target(CustomAttributesCache* 
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t581346955 * tmp;
-			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
-			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("instance"), NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t3430139495 * tmp;
 			tmp = (t3430139495 *)il2cpp_codegen_object_new (t3430139495_TI_var);
 			m4068807987(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t581346955 * tmp;
+			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
+			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("instance"), NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -54063,8 +54315,8 @@ void t4127144549_CustomAttributesCacheGenerator_m_Target(CustomAttributesCache* 
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t581346955_TI_var;
-		typeCache->attributeTypes[1] = t3430139495_TI_var;
+		typeCache->attributeTypes[0] = t3430139495_TI_var;
+		typeCache->attributeTypes[1] = t581346955_TI_var;
 	}
 }
 extern TypeInfo* t581346955_TI_var;
@@ -54103,8 +54355,8 @@ void t4127144549_CustomAttributesCacheGenerator_m_MethodName(CustomAttributesCac
 		typeCache->attributeTypes[1] = t3430139495_TI_var;
 	}
 }
-extern TypeInfo* t581346955_TI_var;
 extern TypeInfo* t3430139495_TI_var;
+extern TypeInfo* t581346955_TI_var;
 extern const uint32_t t4127144549_CustomAttributesCacheGenerator_m_Mode_MetadataUsageId;
 void t4127144549_CustomAttributesCacheGenerator_m_Mode(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -54119,15 +54371,15 @@ void t4127144549_CustomAttributesCacheGenerator_m_Mode(CustomAttributesCache* ca
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t581346955 * tmp;
-			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
-			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("mode"), NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t3430139495 * tmp;
 			tmp = (t3430139495 *)il2cpp_codegen_object_new (t3430139495_TI_var);
 			m4068807987(tmp, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t581346955 * tmp;
+			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
+			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("mode"), NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -54135,8 +54387,8 @@ void t4127144549_CustomAttributesCacheGenerator_m_Mode(CustomAttributesCache* ca
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t581346955_TI_var;
-		typeCache->attributeTypes[1] = t3430139495_TI_var;
+		typeCache->attributeTypes[0] = t3430139495_TI_var;
+		typeCache->attributeTypes[1] = t581346955_TI_var;
 	}
 }
 extern TypeInfo* t3430139495_TI_var;
@@ -54193,19 +54445,19 @@ void t4127144549_CustomAttributesCacheGenerator_m_CallState(CustomAttributesCach
 		{
 			t581346955 * tmp;
 			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
-			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("m_Enabled"), NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
-			t581346955 * tmp;
-			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
 			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("enabled"), NULL);
-			cache->attributes[1] = (Il2CppObject*)tmp;
+			cache->attributes[0] = (Il2CppObject*)tmp;
 		}
 		{
 			t3430139495 * tmp;
 			tmp = (t3430139495 *)il2cpp_codegen_object_new (t3430139495_TI_var);
 			m4068807987(tmp, NULL);
+			cache->attributes[1] = (Il2CppObject*)tmp;
+		}
+		{
+			t581346955 * tmp;
+			tmp = (t581346955 *)il2cpp_codegen_object_new (t581346955_TI_var);
+			m2703462003(tmp, il2cpp_codegen_string_new_wrapper("m_Enabled"), NULL);
 			cache->attributes[2] = (Il2CppObject*)tmp;
 		}
 	}
@@ -54214,8 +54466,8 @@ void t4127144549_CustomAttributesCacheGenerator_m_CallState(CustomAttributesCach
 		typeCache->count = 3;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
 		typeCache->attributeTypes[0] = t581346955_TI_var;
-		typeCache->attributeTypes[1] = t581346955_TI_var;
-		typeCache->attributeTypes[2] = t3430139495_TI_var;
+		typeCache->attributeTypes[1] = t3430139495_TI_var;
+		typeCache->attributeTypes[2] = t581346955_TI_var;
 	}
 }
 extern TypeInfo* t581346955_TI_var;
@@ -54880,8 +55132,8 @@ void t1800197956_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cu
 		typeCache->attributeTypes[0] = t1025395500_TI_var;
 	}
 }
-extern TypeInfo* t641452194_TI_var;
 extern TypeInfo* t1025395500_TI_var;
+extern TypeInfo* t641452194_TI_var;
 extern const uint32_t t581346955_CustomAttributesCacheGenerator_MetadataUsageId;
 void t581346955_CustomAttributesCacheGenerator(CustomAttributesCache* cache, CustomAttributeTypeCache* typeCache)
 {
@@ -54896,17 +55148,17 @@ void t581346955_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cus
 		cache->count = 2;
 		cache->attributes = (Il2CppObject**)il2cpp_gc_alloc_fixed(sizeof(Il2CppObject *) * cache->count, 0);
 		{
-			t641452194 * tmp;
-			tmp = (t641452194 *)il2cpp_codegen_object_new (t641452194_TI_var);
-			m940065582(tmp, NULL);
-			cache->attributes[0] = (Il2CppObject*)tmp;
-		}
-		{
 			t1025395500 * tmp;
 			tmp = (t1025395500 *)il2cpp_codegen_object_new (t1025395500_TI_var);
 			m3458174515(tmp, 256, NULL);
 			m3296043115(tmp, true, NULL);
 			m4032258508(tmp, false, NULL);
+			cache->attributes[0] = (Il2CppObject*)tmp;
+		}
+		{
+			t641452194 * tmp;
+			tmp = (t641452194 *)il2cpp_codegen_object_new (t641452194_TI_var);
+			m940065582(tmp, NULL);
 			cache->attributes[1] = (Il2CppObject*)tmp;
 		}
 	}
@@ -54914,8 +55166,8 @@ void t581346955_CustomAttributesCacheGenerator(CustomAttributesCache* cache, Cus
 	{
 		typeCache->count = 2;
 		typeCache->attributeTypes = (TypeInfo**)il2cpp_codegen_calloc(typeCache->count, sizeof(TypeInfo*));
-		typeCache->attributeTypes[0] = t641452194_TI_var;
-		typeCache->attributeTypes[1] = t1025395500_TI_var;
+		typeCache->attributeTypes[0] = t1025395500_TI_var;
+		typeCache->attributeTypes[1] = t641452194_TI_var;
 	}
 }
 extern TypeInfo* t1025395500_TI_var;
@@ -67306,7 +67558,7 @@ void g_AssemblyU2DCSharp_Assembly_CustomAttributesCacheGenerator(CustomAttribute
 		typeCache->attributeTypes[0] = t4174703210_TI_var;
 	}
 }
-extern const CustomAttributesCacheGenerator g_AttributeGenerators[2227] = 
+extern const CustomAttributesCacheGenerator g_AttributeGenerators[2236] = 
 {
 	NULL,
 	g_mscorlib_Assembly_CustomAttributesCacheGenerator,
@@ -68505,6 +68757,7 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[2227] =
 	t1525280346_CustomAttributesCacheGenerator_m2341339867,
 	t1525280346_CustomAttributesCacheGenerator_m2955775213,
 	t1525280346_CustomAttributesCacheGenerator_m637494532,
+	t1092684080_CustomAttributesCacheGenerator_m1012580896,
 	t1092684080_CustomAttributesCacheGenerator_m1954594923,
 	t1092684080_CustomAttributesCacheGenerator_m3623465101,
 	t3994030297_CustomAttributesCacheGenerator_m3080333084,
@@ -68558,7 +68811,12 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[2227] =
 	t3525329789_CustomAttributesCacheGenerator,
 	t4137084207_CustomAttributesCacheGenerator,
 	t1891715979_CustomAttributesCacheGenerator,
+	t1891715979_CustomAttributesCacheGenerator_m1562314763,
+	t1891715979_CustomAttributesCacheGenerator_t1891715979_m2869326048_Arg1_ParameterInfo,
+	t1891715979_CustomAttributesCacheGenerator_m1501255504,
 	t1891715979_CustomAttributesCacheGenerator_m4175627710,
+	t1891715979_CustomAttributesCacheGenerator_m1660134351,
+	t1891715979_CustomAttributesCacheGenerator_m1312441940,
 	t1525428817_CustomAttributesCacheGenerator,
 	t277289660_CustomAttributesCacheGenerator,
 	t3518514978_CustomAttributesCacheGenerator,
@@ -68672,6 +68930,8 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[2227] =
 	t3012272455_CustomAttributesCacheGenerator_m1437893335,
 	t3012272455_CustomAttributesCacheGenerator_m4058409766,
 	t3012272455_CustomAttributesCacheGenerator_m589898551,
+	t3852595506_CustomAttributesCacheGenerator_m2063094673,
+	t1593691127_CustomAttributesCacheGenerator_m2784798663,
 	t1593691127_CustomAttributesCacheGenerator_m3636305303,
 	t1593691127_CustomAttributesCacheGenerator_m1900207208,
 	t1593691127_CustomAttributesCacheGenerator_m1879002085,
@@ -68775,6 +69035,7 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[2227] =
 	t284553113_CustomAttributesCacheGenerator_m2703574131,
 	t284553113_CustomAttributesCacheGenerator_m221305727,
 	t284553113_CustomAttributesCacheGenerator_m2389720173,
+	t284553113_CustomAttributesCacheGenerator_m2051942009,
 	t284553113_CustomAttributesCacheGenerator_m1409235788,
 	t284553113_CustomAttributesCacheGenerator_m2898114752,
 	t284553113_CustomAttributesCacheGenerator_m1534477480,

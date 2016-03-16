@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Development : MonoBehaviour
 {
 
-//	public string thePlatform;
+	public string thePlatform;
 	public bool visualDebug;
 	public Text UI_Debug2d_text;
 
@@ -20,7 +20,7 @@ public class Development : MonoBehaviour
 			debugMessage ("Platform settings failed", 3.0f);
 
 
-
+	
 
 
 
@@ -46,19 +46,19 @@ public class Development : MonoBehaviour
 			
 		case RuntimePlatform.OSXEditor:
 			debugMessage ("Running in os x editor", 5.0f);
-//			thePlatform = "Editor";
+		thePlatform = "Editor";
 			
 			break;
 			
 		case RuntimePlatform.OSXPlayer:
 			debugMessage ("Running in os x player", 5.0f);
-//			thePlatform = "Standalone os x";
+			thePlatform = "StandaloneOsX";
 			
 			break;
 
 		case RuntimePlatform.WebGLPlayer:
 			debugMessage ("Running in WebGLPlayer", 5.0f);
-			//			thePlatform = "Standalone os x";
+					thePlatform = "WebGL";
 
 			break;
 

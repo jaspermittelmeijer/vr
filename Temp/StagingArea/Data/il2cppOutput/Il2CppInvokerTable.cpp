@@ -5969,11 +5969,46 @@ void* RuntimeInvoker_t1588175760_t4137084207 (const MethodInfo* method, void* ob
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
+void* RuntimeInvoker_t2779279689_t958209021_t958209021_t958209021_t958209021 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, float p1, float p2, float p3, float p4, const MethodInfo* method);
+	((Func)method->method)(obj, *((float*)args[0]), *((float*)args[1]), *((float*)args[2]), *((float*)args[3]), method);
+	return NULL;
+}
+
 void* RuntimeInvoker_t958209021_t1891715979_t1891715979 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef float (*Func)(void* obj, t1891715979  p1, t1891715979  p2, const MethodInfo* method);
 	float ret = ((Func)method->method)(obj, *((t1891715979 *)args[0]), *((t1891715979 *)args[1]), method);
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t1891715979_t958209021_t3525329789 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, float p1, t3525329789  p2, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, *((float*)args[0]), *((t3525329789 *)args[1]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t2779279689_t958209021_t3456035723_t3782781613 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, float p1, t3525329789 * p2, t1891715979 * p3, const MethodInfo* method);
+	((Func)method->method)(obj, *((float*)args[0]), (t3525329789 *)args[1], (t1891715979 *)args[2], method);
+	return NULL;
+}
+
+void* RuntimeInvoker_t1891715979_t3525329789_t3525329789 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, t3525329789  p1, t3525329789  p2, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, *((t3525329789 *)args[0]), *((t3525329789 *)args[1]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t2779279689_t3456035723_t3456035723_t3782781613 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, t3525329789 * p1, t3525329789 * p2, t1891715979 * p3, const MethodInfo* method);
+	((Func)method->method)(obj, (t3525329789 *)args[0], (t3525329789 *)args[1], (t1891715979 *)args[2], method);
+	return NULL;
 }
 
 void* RuntimeInvoker_t1891715979_t1891715979 (const MethodInfo* method, void* obj, void** args)
@@ -5990,6 +6025,48 @@ void* RuntimeInvoker_t2779279689_t3782781613_t3782781613 (const MethodInfo* meth
 	return NULL;
 }
 
+void* RuntimeInvoker_t1891715979_t958209021_t958209021_t958209021 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, float p1, float p2, float p3, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, *((float*)args[0]), *((float*)args[1]), *((float*)args[2]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t3525329789_t1891715979 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t3525329789  (*Func)(void* obj, t1891715979  p1, const MethodInfo* method);
+	t3525329789  ret = ((Func)method->method)(obj, *((t1891715979 *)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t2779279689_t3782781613_t3456035723 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, t1891715979 * p1, t3525329789 * p2, const MethodInfo* method);
+	((Func)method->method)(obj, (t1891715979 *)args[0], (t3525329789 *)args[1], method);
+	return NULL;
+}
+
+void* RuntimeInvoker_t1891715979_t3525329789 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, t3525329789  p1, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, *((t3525329789 *)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t2779279689_t3456035723_t3782781613 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, t3525329789 * p1, t1891715979 * p2, const MethodInfo* method);
+	((Func)method->method)(obj, (t3525329789 *)args[0], (t1891715979 *)args[1], method);
+	return NULL;
+}
+
+void* RuntimeInvoker_t1891715979_t1891715979_t1891715979 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, t1891715979  p1, t1891715979  p2, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, *((t1891715979 *)args[0]), *((t1891715979 *)args[1]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
 void* RuntimeInvoker_t3525329789_t1891715979_t3525329789 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef t3525329789  (*Func)(void* obj, t1891715979  p1, t3525329789  p2, const MethodInfo* method);
@@ -6002,13 +6079,6 @@ void* RuntimeInvoker_t211005341_t1891715979_t1891715979 (const MethodInfo* metho
 	typedef bool (*Func)(void* obj, t1891715979  p1, t1891715979  p2, const MethodInfo* method);
 	bool ret = ((Func)method->method)(obj, *((t1891715979 *)args[0]), *((t1891715979 *)args[1]), method);
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
-}
-
-void* RuntimeInvoker_t2779279689_t958209021_t958209021_t958209021_t958209021 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef void (*Func)(void* obj, float p1, float p2, float p3, float p4, const MethodInfo* method);
-	((Func)method->method)(obj, *((float*)args[0]), *((float*)args[1]), *((float*)args[2]), *((float*)args[3]), method);
-	return NULL;
 }
 
 void* RuntimeInvoker_t211005341_t3525329788 (const MethodInfo* method, void* obj, void** args)
@@ -6312,6 +6382,27 @@ void* RuntimeInvoker_t3890655046 (const MethodInfo* method, void* obj, void** ar
 	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
 }
 
+void* RuntimeInvoker_t1891715979_t2847414787 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, int32_t p1, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, *((int32_t*)args[0]), method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
+void* RuntimeInvoker_t2779279689_t2847414787_t3782781613 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, int32_t p1, t1891715979 * p2, const MethodInfo* method);
+	((Func)method->method)(obj, *((int32_t*)args[0]), (t1891715979 *)args[1], method);
+	return NULL;
+}
+
+void* RuntimeInvoker_t1891715979 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef t1891715979  (*Func)(void* obj, const MethodInfo* method);
+	t1891715979  ret = ((Func)method->method)(obj, method);
+	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+}
+
 void* RuntimeInvoker_t2779279689_t3456035723 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, t3525329789 * p1, const MethodInfo* method);
@@ -6354,24 +6445,17 @@ void* RuntimeInvoker_Il2CppObject_Il2CppObject_t2855346064_t2855346064_t28553460
 	return ret;
 }
 
-void* RuntimeInvoker_t1891715979 (const MethodInfo* method, void* obj, void** args)
+void* RuntimeInvoker_t2779279689_t1891715979 (const MethodInfo* method, void* obj, void** args)
 {
-	typedef t1891715979  (*Func)(void* obj, const MethodInfo* method);
-	t1891715979  ret = ((Func)method->method)(obj, method);
-	return Box(il2cpp_codegen_class_from_type (method->return_type), &ret);
+	typedef void (*Func)(void* obj, t1891715979  p1, const MethodInfo* method);
+	((Func)method->method)(obj, *((t1891715979 *)args[0]), method);
+	return NULL;
 }
 
 void* RuntimeInvoker_t2779279689_t3782781613 (const MethodInfo* method, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, t1891715979 * p1, const MethodInfo* method);
 	((Func)method->method)(obj, (t1891715979 *)args[0], method);
-	return NULL;
-}
-
-void* RuntimeInvoker_t2779279689_t1891715979 (const MethodInfo* method, void* obj, void** args)
-{
-	typedef void (*Func)(void* obj, t1891715979  p1, const MethodInfo* method);
-	((Func)method->method)(obj, *((t1891715979 *)args[0]), method);
 	return NULL;
 }
 
@@ -7856,6 +7940,13 @@ void* RuntimeInvoker_Il2CppObject_t3525329789_t1588175760_t958209021 (const Meth
 {
 	typedef Il2CppObject * (*Func)(void* obj, t3525329789  p1, t1588175760  p2, float p3, const MethodInfo* method);
 	Il2CppObject * ret = ((Func)method->method)(obj, *((t3525329789 *)args[0]), *((t1588175760 *)args[1]), *((float*)args[2]), method);
+	return ret;
+}
+
+void* RuntimeInvoker_Il2CppObject_t3525329789_t958209021 (const MethodInfo* method, void* obj, void** args)
+{
+	typedef Il2CppObject * (*Func)(void* obj, t3525329789  p1, float p2, const MethodInfo* method);
+	Il2CppObject * ret = ((Func)method->method)(obj, *((t3525329789 *)args[0]), *((float*)args[1]), method);
 	return ret;
 }
 
@@ -10736,7 +10827,7 @@ void* RuntimeInvoker_Il2CppObject_t587838465 (const MethodInfo* method, void* ob
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1491] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1504] = 
 {
 	RuntimeInvoker_t2779279689,
 	RuntimeInvoker_t211005341_Il2CppObject,
@@ -11548,12 +11639,22 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1491] =
 	RuntimeInvoker_t211005341_t3525329789_t3525329789,
 	RuntimeInvoker_t4137084207_t1588175760,
 	RuntimeInvoker_t1588175760_t4137084207,
+	RuntimeInvoker_t2779279689_t958209021_t958209021_t958209021_t958209021,
 	RuntimeInvoker_t958209021_t1891715979_t1891715979,
+	RuntimeInvoker_t1891715979_t958209021_t3525329789,
+	RuntimeInvoker_t2779279689_t958209021_t3456035723_t3782781613,
+	RuntimeInvoker_t1891715979_t3525329789_t3525329789,
+	RuntimeInvoker_t2779279689_t3456035723_t3456035723_t3782781613,
 	RuntimeInvoker_t1891715979_t1891715979,
 	RuntimeInvoker_t2779279689_t3782781613_t3782781613,
+	RuntimeInvoker_t1891715979_t958209021_t958209021_t958209021,
+	RuntimeInvoker_t3525329789_t1891715979,
+	RuntimeInvoker_t2779279689_t3782781613_t3456035723,
+	RuntimeInvoker_t1891715979_t3525329789,
+	RuntimeInvoker_t2779279689_t3456035723_t3782781613,
+	RuntimeInvoker_t1891715979_t1891715979_t1891715979,
 	RuntimeInvoker_t3525329789_t1891715979_t3525329789,
 	RuntimeInvoker_t211005341_t1891715979_t1891715979,
-	RuntimeInvoker_t2779279689_t958209021_t958209021_t958209021_t958209021,
 	RuntimeInvoker_t211005341_t3525329788,
 	RuntimeInvoker_t211005341_t3525329789,
 	RuntimeInvoker_t1525428817_t1525428817,
@@ -11597,15 +11698,17 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1491] =
 	RuntimeInvoker_t2779279689_Il2CppObject_t958209021_t958209021,
 	RuntimeInvoker_t1905076713,
 	RuntimeInvoker_t3890655046,
+	RuntimeInvoker_t1891715979_t2847414787,
+	RuntimeInvoker_t2779279689_t2847414787_t3782781613,
+	RuntimeInvoker_t1891715979,
 	RuntimeInvoker_t2779279689_t3456035723,
 	RuntimeInvoker_t1603883884_t2847414787,
 	RuntimeInvoker_Il2CppObject_Il2CppObject_t3525329789_t1891715979,
 	RuntimeInvoker_Il2CppObject_Il2CppObject_t3456035723_t3782781613,
 	RuntimeInvoker_t62234258,
 	RuntimeInvoker_Il2CppObject_Il2CppObject_t2855346064_t2855346064_t2855346064_t2855346064_Il2CppObject,
-	RuntimeInvoker_t1891715979,
-	RuntimeInvoker_t2779279689_t3782781613,
 	RuntimeInvoker_t2779279689_t1891715979,
+	RuntimeInvoker_t2779279689_t3782781613,
 	RuntimeInvoker_t277289660,
 	RuntimeInvoker_t211005341_t2847414787_t958209021,
 	RuntimeInvoker_t1575932342,
@@ -11818,6 +11921,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1491] =
 	RuntimeInvoker_t958209021_t958209021_t958209021_t2847414787_t2847414787,
 	RuntimeInvoker_t2779279689_t2847414787_t2847414787_t2847414787_Il2CppObject_Il2CppObject,
 	RuntimeInvoker_Il2CppObject_t3525329789_t1588175760_t958209021,
+	RuntimeInvoker_Il2CppObject_t3525329789_t958209021,
 	RuntimeInvoker_t2779279689_t2847414787_t426379564,
 	RuntimeInvoker_t2779279689_t3434429003_t2847414787,
 	RuntimeInvoker_t2779279689_t3434429003_t2847414787_t2847414787,

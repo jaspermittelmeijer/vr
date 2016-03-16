@@ -1419,6 +1419,9 @@ extern const Il2CppGenericInst GenInst_t1217738301_0_0_0 = { 1, GenInst_t1217738
 extern const Il2CppType t509473927_0_0_0;
 static const Il2CppType* GenInst_t509473927_0_0_0_Types[] = { &t509473927_0_0_0 };
 extern const Il2CppGenericInst GenInst_t509473927_0_0_0 = { 1, GenInst_t509473927_0_0_0_Types };
+extern const Il2CppType t1092684080_0_0_0;
+static const Il2CppType* GenInst_t1092684080_0_0_0_Types[] = { &t1092684080_0_0_0 };
+extern const Il2CppGenericInst GenInst_t1092684080_0_0_0 = { 1, GenInst_t1092684080_0_0_0_Types };
 static const Il2CppType* GenInst_t2847414787_0_0_0_t2847414787_0_0_0_Types[] = { &t2847414787_0_0_0, &t2847414787_0_0_0 };
 extern const Il2CppGenericInst GenInst_t2847414787_0_0_0_t2847414787_0_0_0 = { 2, GenInst_t2847414787_0_0_0_t2847414787_0_0_0_Types };
 static const Il2CppType* GenInst_t318735129_0_0_0_t318735129_0_0_0_Types[] = { &t318735129_0_0_0, &t318735129_0_0_0 };
@@ -1469,7 +1472,7 @@ static const Il2CppType* GenInst_t2236205026_0_0_0_Il2CppObject_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_t2236205026_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_t2236205026_0_0_0_Il2CppObject_0_0_0_Types };
 static const Il2CppType* GenInst_t958209021_0_0_0_Il2CppObject_0_0_0_Types[] = { &t958209021_0_0_0, &Il2CppObject_0_0_0 };
 extern const Il2CppGenericInst GenInst_t958209021_0_0_0_Il2CppObject_0_0_0 = { 2, GenInst_t958209021_0_0_0_Il2CppObject_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[511] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[512] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_t2847414787_0_0_0,
@@ -1957,6 +1960,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[511] =
 	&GenInst_t319835859_0_0_0,
 	&GenInst_t1217738301_0_0_0,
 	&GenInst_t509473927_0_0_0,
+	&GenInst_t1092684080_0_0_0,
 	&GenInst_t2847414787_0_0_0_t2847414787_0_0_0,
 	&GenInst_t318735129_0_0_0_t318735129_0_0_0,
 	&GenInst_t560415562_0_0_0_t560415562_0_0_0,

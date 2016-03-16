@@ -10,6 +10,8 @@ public class CustomRender : MonoBehaviour
 	public Material lineMaterial;
 	private List<int> lines;
 	private Vector3[] vertices;
+	public Color lineColor = Color.black;
+
 
 	void Start ()
 	{
@@ -17,6 +19,10 @@ public class CustomRender : MonoBehaviour
 		CreateLinesFromMesh ();
 
 
+	}
+	public void passColor (Color theColor) {
+
+		lineColor = theColor;
 	}
 
 	private bool lineExists (int a, int b)
@@ -91,7 +97,8 @@ public class CustomRender : MonoBehaviour
 //			Shader shader = Shader.Find ("Hidden/Internal-Colored");
 
 //			Material material = Material.find
-			Shader shader = Shader.Find ("Standard");
+//			Shader shader = Shader.Find ("Standard");
+					Shader shader = Shader.Find ("Hidden/Internal-Colored");
 
 
 			lineMaterial = new Material (shader);
@@ -125,7 +132,9 @@ public class CustomRender : MonoBehaviour
 	
 		// Cycle through the list of lines
 		for (int i = 0; i < lines.Count; i+=2) {
-			GL.Color (Color.red);
+//			GL.Color (Color.red);
+			GL.Color (lineColor);
+
 
 			GL.Vertex3 (vertices [lines [i]].x, vertices [lines [i]].y, vertices [lines [i]].z);
 			GL.Vertex3 (vertices [lines [i + 1]].x, vertices [lines [i + 1]].y, vertices [lines [i + 1]].z);

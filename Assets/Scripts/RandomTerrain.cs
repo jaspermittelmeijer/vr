@@ -36,10 +36,10 @@ public class RandomTerrain
 		unitSize = size / (arraySize - 1);
 //		Debug.Log ("Unitsize: " + unitSize);
 
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugPoint (new Vector3 (0.0f,0.0f,0.0f), new Color (1.0f, 1.0f, 1.0f), 0.05f);
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugPoint (new Vector3 (0.0f,0.0f,size), new Color (1.0f, 1.0f, 1.0f), 0.05f);
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugPoint (new Vector3 (size,0.0f,0.0f), new Color (1.0f, 1.0f, 1.0f), 0.05f);
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugPoint (new Vector3 (size,0.0f,size), new Color (1.0f, 1.0f, 1.0f), 0.05f);
+		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (0.0f,0.0f,0.0f),  0.05f);
+		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (0.0f,0.0f,size), 0.05f);
+		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (size,0.0f,0.0f),  0.05f);
+		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (size,0.0f,size),0.05f);
 
 
 

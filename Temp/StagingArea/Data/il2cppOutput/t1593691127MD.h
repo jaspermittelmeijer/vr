@@ -13,6 +13,7 @@
 #include <exception>
 
 struct String_t;
+struct t3852595506;
 
 #include "codegen/il2cpp-codegen.h"
 #include "String_t.h"
@@ -22,8 +23,10 @@ struct String_t;
 #include "t2066545881.h"
 
 extern "C"  void m1327041086 (Il2CppObject * __this , const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  int32_t m2784798663 (Il2CppObject * __this , const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  bool m3636305303 (Il2CppObject * __this , String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  float m1900207208 (Il2CppObject * __this , String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  t3852595506 * m443992808 (Il2CppObject * __this , const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  bool m1879002085 (Il2CppObject * __this , String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  bool m2673079080 (Il2CppObject * __this , String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  bool m4080958081 (Il2CppObject * __this , int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;

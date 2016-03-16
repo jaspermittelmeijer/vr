@@ -8140,14 +8140,20 @@ extern "C" void m2088074937 ();
 extern "C" void m1795114979 ();
 extern "C" void m725832131 ();
 extern "C" void m2619692036 ();
+extern "C" void m2665436357 ();
+extern "C" void m315730319 ();
+extern "C" void m2063094673 ();
+extern "C" void m822764265 ();
 extern "C" void m4281149553 ();
 extern "C" void m2758161818 ();
 extern "C" void m1702517944 ();
 extern "C" void m1186126593 ();
 extern "C" void m55581643 ();
 extern "C" void m1327041086 ();
+extern "C" void m2784798663 ();
 extern "C" void m3636305303 ();
 extern "C" void m1900207208 ();
+extern "C" void m443992808 ();
 extern "C" void m1879002085 ();
 extern "C" void m2673079080 ();
 extern "C" void m4080958081 ();
@@ -8354,12 +8360,24 @@ extern "C" void m3534129213 ();
 extern "C" void m2612484153 ();
 extern "C" void m2829769106 ();
 extern "C" void m1741701746 ();
+extern "C" void m1100844011 ();
 extern "C" void m580284 ();
+extern "C" void m644124247 ();
+extern "C" void m1562314763 ();
+extern "C" void m2869326048 ();
+extern "C" void m1501255504 ();
 extern "C" void m3542515566 ();
 extern "C" void m4175627710 ();
 extern "C" void m1793285860 ();
+extern "C" void m997303795 ();
+extern "C" void m1204688217 ();
+extern "C" void m1608666215 ();
+extern "C" void m1660134351 ();
+extern "C" void m3681319598 ();
+extern "C" void m1312441940 ();
 extern "C" void m3823258238 ();
 extern "C" void m3843409946 ();
+extern "C" void m3077481361 ();
 extern "C" void m3771288979 ();
 extern "C" void m4197259746 ();
 extern "C" void m3362417303 ();
@@ -8480,6 +8498,7 @@ extern "C" void m1216104542 ();
 extern "C" void m3487429352 ();
 extern "C" void m2163490602 ();
 extern "C" void m2060823533 ();
+extern "C" void m1012580896 ();
 extern "C" void m1954594923 ();
 extern "C" void m3623465101 ();
 extern "C" void m1030655936 ();
@@ -8489,6 +8508,7 @@ extern "C" void m4010076224 ();
 extern "C" void m2023271172 ();
 extern "C" void m2863879896 ();
 extern "C" void m670320982 ();
+extern "C" void m2187391845 ();
 extern "C" void m3601699608 ();
 extern "C" void m3080333084 ();
 extern "C" void m1504859443 ();
@@ -8630,9 +8650,12 @@ extern "C" void m668140784 ();
 extern "C" void m3504330903 ();
 extern "C" void m2703574131 ();
 extern "C" void m221305727 ();
+extern "C" void m1058084741 ();
 extern "C" void m877665793 ();
 extern "C" void m11483428 ();
+extern "C" void m1525803229 ();
 extern "C" void m2389720173 ();
+extern "C" void m2051942009 ();
 extern "C" void m3343229381 ();
 extern "C" void m3719981474 ();
 extern "C" void m1409235788 ();
@@ -8724,6 +8747,7 @@ extern "C" void m1616598929 ();
 extern "C" void m4015137012 ();
 extern "C" void m695438225 ();
 extern "C" void m2842958165 ();
+extern "C" void m3293197314 ();
 extern "C" void m973638459 ();
 extern "C" void m4277988370 ();
 extern "C" void m582817895 ();
@@ -10178,6 +10202,7 @@ extern "C" void m244631242 ();
 extern "C" void m2764536540 ();
 extern "C" void m345449972 ();
 extern "C" void m3587555060 ();
+extern "C" void m1231589026 ();
 extern "C" void m1818472722 ();
 extern "C" void m2992021279 ();
 extern "C" void m2650714328 ();
@@ -10227,10 +10252,11 @@ extern "C" void m1796942328 ();
 extern "C" void m744080120 ();
 extern "C" void m1597499413 ();
 extern "C" void m3187468309 ();
+extern "C" void m1998006030 ();
 extern "C" void m4285292089 ();
 extern "C" void m3232429881 ();
 extern "C" void m1426930676 ();
-extern const methodPointerType g_MethodPointers[10219] = 
+extern const methodPointerType g_MethodPointers[10245] = 
 {
 	m2389348044,
 	m2218462520,
@@ -18361,14 +18387,20 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m1795114979,
 	m725832131,
 	m2619692036,
+	m2665436357,
+	m315730319,
+	m2063094673,
+	m822764265,
 	m4281149553,
 	m2758161818,
 	m1702517944,
 	m1186126593,
 	m55581643,
 	m1327041086,
+	m2784798663,
 	m3636305303,
 	m1900207208,
+	m443992808,
 	m1879002085,
 	m2673079080,
 	m4080958081,
@@ -18575,12 +18607,24 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m2612484153,
 	m2829769106,
 	m1741701746,
+	m1100844011,
 	m580284,
+	m644124247,
+	m1562314763,
+	m2869326048,
+	m1501255504,
 	m3542515566,
 	m4175627710,
 	m1793285860,
+	m997303795,
+	m1204688217,
+	m1608666215,
+	m1660134351,
+	m3681319598,
+	m1312441940,
 	m3823258238,
 	m3843409946,
+	m3077481361,
 	m3771288979,
 	m4197259746,
 	m3362417303,
@@ -18701,6 +18745,7 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m3487429352,
 	m2163490602,
 	m2060823533,
+	m1012580896,
 	m1954594923,
 	m3623465101,
 	m1030655936,
@@ -18710,6 +18755,7 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m2023271172,
 	m2863879896,
 	m670320982,
+	m2187391845,
 	m3601699608,
 	m3080333084,
 	m1504859443,
@@ -18851,9 +18897,12 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m3504330903,
 	m2703574131,
 	m221305727,
+	m1058084741,
 	m877665793,
 	m11483428,
+	m1525803229,
 	m2389720173,
+	m2051942009,
 	m3343229381,
 	m3719981474,
 	m1409235788,
@@ -18945,6 +18994,7 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m4015137012,
 	m695438225,
 	m2842958165,
+	m3293197314,
 	m973638459,
 	m4277988370,
 	m582817895,
@@ -20399,6 +20449,7 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m2764536540,
 	m345449972,
 	m3587555060,
+	m1231589026,
 	m1818472722,
 	m2992021279,
 	m2650714328,
@@ -20448,6 +20499,7 @@ extern const methodPointerType g_MethodPointers[10219] =
 	m744080120,
 	m1597499413,
 	m3187468309,
+	m1998006030,
 	m4285292089,
 	m3232429881,
 	m1426930676,

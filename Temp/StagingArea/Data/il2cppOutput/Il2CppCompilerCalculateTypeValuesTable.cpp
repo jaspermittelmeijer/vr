@@ -794,6 +794,8 @@
 #include "t2066545881.h"
 #include "t3890655046.h"
 #include "t1603883884.h"
+#include "t3852595506.h"
+#include "t1593691127.h"
 #include "t62234258.h"
 #include "t3878351788.h"
 #include "t1072804841.h"
@@ -1334,7 +1336,6 @@
 #include "t931256902.h"
 #include "t1240057615.h"
 #include "t3012272455.h"
-#include "t1593691127.h"
 #include "t2126946602.h"
 #include "t4012695102.h"
 #include "t284553113.h"
@@ -1417,7 +1418,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[6288] = 
+extern const int32_t g_FieldOffsetTable[6307] = 
 {
 	0,
 	0,
@@ -5959,10 +5960,11 @@ extern const int32_t g_FieldOffsetTable[6288] =
 	t4137084207::fog1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t4137084207::fog2() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t4137084207::fog3() + static_cast<int32_t>(sizeof(Il2CppObject)),
-	t1891715979::fog0() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	0,
 	t1891715979::fog1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1891715979::fog2() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1891715979::fog3() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	t1891715979::fog4() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1525428817::fog0() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1525428817::fog1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1525428817::fog2() + static_cast<int32_t>(sizeof(Il2CppObject)),
@@ -6080,6 +6082,8 @@ extern const int32_t g_FieldOffsetTable[6288] =
 	t1603883884::fog11() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1603883884::fog12() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	t1603883884::fog13() + static_cast<int32_t>(sizeof(Il2CppObject)),
+	t3852595506::fog0(),
+	t1593691127_SFs::fog0(),
 	t62234258::fog1() + static_cast<int32_t>(sizeof(Il2CppObject)),
 	0,
 	0,
@@ -7659,6 +7663,7 @@ extern const int32_t g_FieldOffsetTable[6288] =
 	t509473927::fog2(),
 	t509473927::fog3(),
 	t509473927::fog4(),
+	t509473927::fog5(),
 	t880701411::fog0(),
 	t880701411::fog1(),
 	t880701411::fog2(),
@@ -7669,6 +7674,7 @@ extern const int32_t g_FieldOffsetTable[6288] =
 	t1443054875::fog2(),
 	t1443054875::fog3(),
 	t1443054875::fog4(),
+	t1443054875::fog5(),
 	t77292912::fog0(),
 	t77292912::fog1(),
 	t77292912::fog2(),
@@ -7703,15 +7709,29 @@ extern const int32_t g_FieldOffsetTable[6288] =
 	t1562406440::fog6(),
 	t1562406440::fog7(),
 	t319835859::fog2(),
+	t319835859::fog3(),
 	t83766130::fog2(),
 	t83766130::fog3(),
 	t83766130::fog4(),
 	t83766130::fog5(),
+	t83766130::fog6(),
+	t83766130::fog7(),
+	t83766130::fog8(),
+	t83766130::fog9(),
+	t83766130::fog10(),
+	t83766130::fog11(),
+	t83766130::fog12(),
+	t83766130::fog13(),
+	t83766130::fog14(),
+	t83766130::fog15(),
+	t83766130::fog16(),
+	t83766130::fog17(),
+	t83766130::fog18(),
 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1600] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1601] = 
 {
 	sizeof (t86524790), -1, 0, 0,
 	sizeof (Il2CppObject), -1, 0, 0,
@@ -8968,7 +8988,8 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1600] =
 	sizeof (t2066545881)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (t3890655046)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (t1603883884)+ sizeof (Il2CppObject), sizeof(t1603883884_marshaled), 0, 0,
-	sizeof (t1593691127), -1, 0, 0,
+	sizeof (t3852595506), -1, 0, 0,
+	sizeof (t1593691127), -1, sizeof(t1593691127_SFs), 0,
 	sizeof (t62234258)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (t3878351788), sizeof(t3878351788_marshaled), 0, 0,
 	sizeof (t2126946602), -1, 0, 0,

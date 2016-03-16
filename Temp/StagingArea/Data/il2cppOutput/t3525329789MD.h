@@ -47,6 +47,7 @@ extern "C"  t3525329789  m1616598929 (Il2CppObject * __this , const MethodInfo* 
 extern "C"  t3525329789  m4015137012 (Il2CppObject * __this , const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t3525329789  m695438225 (Il2CppObject * __this , t3525329789  p0, t3525329789  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t3525329789  m2842958165 (Il2CppObject * __this , t3525329789  p0, t3525329789  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  t3525329789  m3293197314 (Il2CppObject * __this , t3525329789  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t3525329789  m973638459 (Il2CppObject * __this , t3525329789  p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t3525329789  m4277988370 (Il2CppObject * __this , t3525329789  p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  bool m582817895 (Il2CppObject * __this , t3525329789  p0, t3525329789  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;

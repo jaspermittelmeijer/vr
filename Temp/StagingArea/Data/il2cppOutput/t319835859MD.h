@@ -23,3 +23,4 @@ extern "C"  void m1796942328 (t319835859 * __this, const MethodInfo* method) IL2
 extern "C"  void m744080120 (t319835859 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  void m1597499413 (t319835859 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t4012695102 * m3187468309 (t319835859 * __this, t3525329789  p0, t1588175760  p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  t4012695102 * m1998006030 (t319835859 * __this, t3525329789  p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;

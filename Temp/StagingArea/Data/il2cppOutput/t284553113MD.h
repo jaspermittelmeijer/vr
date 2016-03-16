@@ -29,9 +29,12 @@ extern "C"  t3525329789  m668140784 (t284553113 * __this, const MethodInfo* meth
 extern "C"  void m3504330903 (t284553113 * __this, t3525329789  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  void m2703574131 (t284553113 * __this, t3525329789 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  void m221305727 (t284553113 * __this, t3525329789 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  t3525329789  m1058084741 (t284553113 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t3525329789  m877665793 (t284553113 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t1891715979  m11483428 (t284553113 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void m1525803229 (t284553113 * __this, t1891715979  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  void m2389720173 (t284553113 * __this, t1891715979 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C"  void m2051942009 (t284553113 * __this, t1891715979 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  t1891715979  m3343229381 (t284553113 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  void m3719981474 (t284553113 * __this, t1891715979  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 extern "C"  void m1409235788 (t284553113 * __this, t1891715979 * p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;

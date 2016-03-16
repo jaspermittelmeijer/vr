@@ -15,6 +15,7 @@ struct t3644373756;
 struct t3227571696;
 
 #include "t3012272455.h"
+#include "t1588175760.h"
 
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -28,6 +29,7 @@ public:
 	t1886596500 * f2;
 	t3644373756 * f3;
 	t3227571696* f4;
+	t1588175760  f5;
 
 public:
 	inline static int32_t fog2() { return static_cast<int32_t>(offsetof(t509473927, f2)); }
@@ -55,6 +57,14 @@ public:
 	{
 		f4 = value;
 		Il2CppCodeGenWriteBarrier(&f4, value);
+	}
+
+	inline static int32_t fog5() { return static_cast<int32_t>(offsetof(t509473927, f5)); }
+	inline t1588175760  fg5() const { return f5; }
+	inline t1588175760 * fag5() { return &f5; }
+	inline void fs5(t1588175760  value)
+	{
+		f5 = value;
 	}
 };
 

@@ -20,6 +20,7 @@ struct Type_t;
 struct String_t;
 struct t2614611333;
 struct t1967233988;
+struct t3852595506;
 struct t3787694287;
 struct t116041064;
 struct Il2CppObject;
@@ -100,7 +101,6 @@ struct t3386766918;
 struct t2269718975;
 struct t3599015854;
 struct t3599015854_marshaled;
-struct t1072804841;
 
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
@@ -145,6 +145,9 @@ struct t1072804841;
 #include "t1967233988MD.h"
 #include "t124305799MD.h"
 #include "t124305799.h"
+#include "t3852595506.h"
+#include "t3852595506MD.h"
+#include "t1891715979.h"
 #include "t62234258.h"
 #include "t62234258MD.h"
 #include "t1685321150.h"
@@ -226,7 +229,6 @@ struct t1072804841;
 #include "t3120504042MD.h"
 #include "t2246592261.h"
 #include "t1588791936MD.h"
-#include "t1891715979.h"
 #include "IntPtr_tMD.h"
 #include "t2601443956.h"
 #include "t2601443956MD.h"
@@ -1044,6 +1046,42 @@ extern "C"  int32_t m2619692036 (Il2CppObject * __this , const MethodInfo* metho
 	_il2cpp_icall_func = (m2619692036_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIUtility::Internal_GetGUIDepth()");
 	return _il2cpp_icall_func();
 }
+extern "C"  void m2665436357 (t3852595506 * __this, int32_t p0, const MethodInfo* method)
+{
+	{
+		m1772956182(__this, NULL);
+		int32_t L_0 = p0;
+		__this->fs0(L_0);
+		return;
+	}
+}
+extern "C"  t1891715979  m315730319 (Il2CppObject * __this , int32_t p0, const MethodInfo* method)
+{
+	t1891715979  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		int32_t L_0 = p0;
+		m2063094673(NULL, L_0, (&V_0), NULL);
+		t1891715979  L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  void m2063094673 (Il2CppObject * __this , int32_t p0, t1891715979 * p1, const MethodInfo* method)
+{
+	typedef void (*m2063094673_ftn) (int32_t, t1891715979 *);
+	static m2063094673_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m2063094673_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Gyroscope::INTERNAL_CALL_attitude_Internal(System.Int32,UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(p0, p1);
+}
+extern "C"  t1891715979  m822764265 (t3852595506 * __this, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = __this->fg0();
+		t1891715979  L_1 = m315730319(NULL, L_0, NULL);
+		return L_1;
+	}
+}
 extern "C"  String_t* m4281149553 (t3114874302 * __this, const MethodInfo* method)
 {
 	{
@@ -1150,6 +1188,14 @@ extern "C"  void m1327041086 (Il2CppObject * __this , const MethodInfo* method)
 		return;
 	}
 }
+extern "C"  int32_t m2784798663 (Il2CppObject * __this , const MethodInfo* method)
+{
+	typedef int32_t (*m2784798663_ftn) ();
+	static m2784798663_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m2784798663_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::mainGyroIndex_Internal()");
+	return _il2cpp_icall_func();
+}
 extern "C"  bool m3636305303 (Il2CppObject * __this , String_t* p0, const MethodInfo* method)
 {
 	typedef bool (*m3636305303_ftn) (String_t*);
@@ -1165,6 +1211,40 @@ extern "C"  float m1900207208 (Il2CppObject * __this , String_t* p0, const Metho
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (m1900207208_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetAxisRaw(System.String)");
 	return _il2cpp_icall_func(p0);
+}
+extern TypeInfo* t1593691127_TI_var;
+extern TypeInfo* t3852595506_TI_var;
+extern const uint32_t m443992808_MetadataUsageId;
+extern "C"  t3852595506 * m443992808 (Il2CppObject * __this , const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (m443992808_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
+		t3852595506 * L_0 = ((t1593691127_SFs*)t1593691127_TI_var->static_fields)->fg0();
+		if (L_0)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
+		int32_t L_1 = m2784798663(NULL, NULL);
+		t3852595506 * L_2 = (t3852595506 *)il2cpp_codegen_object_new(t3852595506_TI_var);
+		m2665436357(L_2, L_1, NULL);
+		((t1593691127_SFs*)t1593691127_TI_var->static_fields)->fs0(L_2);
+	}
+
+IL_0019:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(t1593691127_TI_var);
+		t3852595506 * L_3 = ((t1593691127_SFs*)t1593691127_TI_var->static_fields)->fg0();
+		return L_3;
+	}
 }
 extern "C"  bool m1879002085 (Il2CppObject * __this , String_t* p0, const MethodInfo* method)
 {
@@ -4442,19 +4522,70 @@ extern "C"  void m1741701746 (t3076083828 * __this, const MethodInfo* method)
 		return;
 	}
 }
+extern "C"  void m1100844011 (t1891715979 * __this, float p0, float p1, float p2, float p3, const MethodInfo* method)
+{
+	{
+		float L_0 = p0;
+		__this->fs1(L_0);
+		float L_1 = p1;
+		__this->fs2(L_1);
+		float L_2 = p2;
+		__this->fs3(L_2);
+		float L_3 = p3;
+		__this->fs4(L_3);
+		return;
+	}
+}
 extern "C"  float m580284 (Il2CppObject * __this , t1891715979  p0, t1891715979  p1, const MethodInfo* method)
 {
 	{
-		float L_0 = (&p0)->fg0();
-		float L_1 = (&p1)->fg0();
-		float L_2 = (&p0)->fg1();
-		float L_3 = (&p1)->fg1();
-		float L_4 = (&p0)->fg2();
-		float L_5 = (&p1)->fg2();
-		float L_6 = (&p0)->fg3();
-		float L_7 = (&p1)->fg3();
+		float L_0 = (&p0)->fg1();
+		float L_1 = (&p1)->fg1();
+		float L_2 = (&p0)->fg2();
+		float L_3 = (&p1)->fg2();
+		float L_4 = (&p0)->fg3();
+		float L_5 = (&p1)->fg3();
+		float L_6 = (&p0)->fg4();
+		float L_7 = (&p1)->fg4();
 		return ((float)((float)((float)((float)((float)((float)((float)((float)L_0*(float)L_1))+(float)((float)((float)L_2*(float)L_3))))+(float)((float)((float)L_4*(float)L_5))))+(float)((float)((float)L_6*(float)L_7))));
 	}
+}
+extern "C"  t1891715979  m644124247 (Il2CppObject * __this , float p0, t3525329789  p1, const MethodInfo* method)
+{
+	t1891715979  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		float L_0 = p0;
+		m1562314763(NULL, L_0, (&p1), (&V_0), NULL);
+		t1891715979  L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  void m1562314763 (Il2CppObject * __this , float p0, t3525329789 * p1, t1891715979 * p2, const MethodInfo* method)
+{
+	typedef void (*m1562314763_ftn) (float, t3525329789 *, t1891715979 *);
+	static m1562314763_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m1562314763_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Quaternion::INTERNAL_CALL_AngleAxis(System.Single,UnityEngine.Vector3&,UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(p0, p1, p2);
+}
+extern "C"  t1891715979  m2869326048 (Il2CppObject * __this , t3525329789  p0, t3525329789  p1, const MethodInfo* method)
+{
+	t1891715979  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		m1501255504(NULL, (&p0), (&p1), (&V_0), NULL);
+		t1891715979  L_0 = V_0;
+		return L_0;
+	}
+}
+extern "C"  void m1501255504 (Il2CppObject * __this , t3525329789 * p0, t3525329789 * p1, t1891715979 * p2, const MethodInfo* method)
+{
+	typedef void (*m1501255504_ftn) (t3525329789 *, t3525329789 *, t1891715979 *);
+	static m1501255504_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m1501255504_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Quaternion::INTERNAL_CALL_LookRotation(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(p0, p1, p2);
 }
 extern "C"  t1891715979  m3542515566 (Il2CppObject * __this , t1891715979  p0, const MethodInfo* method)
 {
@@ -4488,25 +4619,25 @@ extern "C"  String_t* m1793285860 (t1891715979 * __this, const MethodInfo* metho
 	}
 	{
 		t11523773* L_0 = ((t11523773*)SZArrayNew(t11523773_TI_var, (uint32_t)4));
-		float L_1 = __this->fg0();
+		float L_1 = __this->fg1();
 		float L_2 = L_1;
 		Il2CppObject * L_3 = Box(t958209021_TI_var, &L_2);
 		ArrayElementTypeCheck (L_0, L_3);
 		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppObject *)L_3);
 		t11523773* L_4 = L_0;
-		float L_5 = __this->fg1();
+		float L_5 = __this->fg2();
 		float L_6 = L_5;
 		Il2CppObject * L_7 = Box(t958209021_TI_var, &L_6);
 		ArrayElementTypeCheck (L_4, L_7);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (Il2CppObject *)L_7);
 		t11523773* L_8 = L_4;
-		float L_9 = __this->fg2();
+		float L_9 = __this->fg3();
 		float L_10 = L_9;
 		Il2CppObject * L_11 = Box(t958209021_TI_var, &L_10);
 		ArrayElementTypeCheck (L_8, L_11);
 		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(2), (Il2CppObject *)L_11);
 		t11523773* L_12 = L_8;
-		float L_13 = __this->fg3();
+		float L_13 = __this->fg4();
 		float L_14 = L_13;
 		Il2CppObject * L_15 = Box(t958209021_TI_var, &L_14);
 		ArrayElementTypeCheck (L_12, L_15);
@@ -4515,16 +4646,74 @@ extern "C"  String_t* m1793285860 (t1891715979 * __this, const MethodInfo* metho
 		return L_16;
 	}
 }
+extern "C"  t3525329789  m997303795 (t1891715979 * __this, const MethodInfo* method)
+{
+	{
+		t3525329789  L_0 = m1608666215(NULL, (*(t1891715979 *)__this), NULL);
+		t3525329789  L_1 = m973638459(NULL, L_0, (57.29578f), NULL);
+		return L_1;
+	}
+}
+extern "C"  t1891715979  m1204688217 (Il2CppObject * __this , float p0, float p1, float p2, const MethodInfo* method)
+{
+	{
+		float L_0 = p0;
+		float L_1 = p1;
+		float L_2 = p2;
+		t3525329789  L_3;
+		memset(&L_3, 0, sizeof(L_3));
+		m2926210380(&L_3, L_0, L_1, L_2, NULL);
+		t3525329789  L_4 = m973638459(NULL, L_3, (0.0174532924f), NULL);
+		t1891715979  L_5 = m3681319598(NULL, L_4, NULL);
+		return L_5;
+	}
+}
+extern "C"  t3525329789  m1608666215 (Il2CppObject * __this , t1891715979  p0, const MethodInfo* method)
+{
+	t3525329789  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		m1660134351(NULL, (&p0), (&V_0), NULL);
+		t3525329789  L_0 = V_0;
+		return L_0;
+	}
+}
+extern "C"  void m1660134351 (Il2CppObject * __this , t1891715979 * p0, t3525329789 * p1, const MethodInfo* method)
+{
+	typedef void (*m1660134351_ftn) (t1891715979 *, t3525329789 *);
+	static m1660134351_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m1660134351_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Quaternion::INTERNAL_CALL_Internal_ToEulerRad(UnityEngine.Quaternion&,UnityEngine.Vector3&)");
+	_il2cpp_icall_func(p0, p1);
+}
+extern "C"  t1891715979  m3681319598 (Il2CppObject * __this , t3525329789  p0, const MethodInfo* method)
+{
+	t1891715979  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		m1312441940(NULL, (&p0), (&V_0), NULL);
+		t1891715979  L_0 = V_0;
+		return L_0;
+	}
+}
+extern "C"  void m1312441940 (Il2CppObject * __this , t3525329789 * p0, t1891715979 * p1, const MethodInfo* method)
+{
+	typedef void (*m1312441940_ftn) (t3525329789 *, t1891715979 *);
+	static m1312441940_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m1312441940_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Quaternion::INTERNAL_CALL_Internal_FromEulerRad(UnityEngine.Vector3&,UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(p0, p1);
+}
 extern "C"  int32_t m3823258238 (t1891715979 * __this, const MethodInfo* method)
 {
 	{
-		float* L_0 = __this->fag0();
+		float* L_0 = __this->fag1();
 		int32_t L_1 = m65342520(L_0, NULL);
-		float* L_2 = __this->fag1();
+		float* L_2 = __this->fag2();
 		int32_t L_3 = m65342520(L_2, NULL);
-		float* L_4 = __this->fag2();
+		float* L_4 = __this->fag3();
 		int32_t L_5 = m65342520(L_4, NULL);
-		float* L_6 = __this->fag3();
+		float* L_6 = __this->fag4();
 		int32_t L_7 = m65342520(L_6, NULL);
 		return ((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_1^(int32_t)((int32_t)((int32_t)L_3<<(int32_t)2))))^(int32_t)((int32_t)((int32_t)L_5>>(int32_t)2))))^(int32_t)((int32_t)((int32_t)L_7>>(int32_t)1))));
 	}
@@ -4557,8 +4746,8 @@ IL_000d:
 	{
 		Il2CppObject * L_1 = p0;
 		V_0 = ((*(t1891715979 *)((t1891715979 *)UnBox (L_1, t1891715979_TI_var))));
-		float* L_2 = __this->fag0();
-		float L_3 = (&V_0)->fg0();
+		float* L_2 = __this->fag1();
+		float L_3 = (&V_0)->fg1();
 		bool L_4 = m2110115959(L_2, L_3, NULL);
 		if (!L_4)
 		{
@@ -4566,8 +4755,8 @@ IL_000d:
 		}
 	}
 	{
-		float* L_5 = __this->fag1();
-		float L_6 = (&V_0)->fg1();
+		float* L_5 = __this->fag2();
+		float L_6 = (&V_0)->fg2();
 		bool L_7 = m2110115959(L_5, L_6, NULL);
 		if (!L_7)
 		{
@@ -4575,8 +4764,8 @@ IL_000d:
 		}
 	}
 	{
-		float* L_8 = __this->fag2();
-		float L_9 = (&V_0)->fg2();
+		float* L_8 = __this->fag3();
+		float L_9 = (&V_0)->fg3();
 		bool L_10 = m2110115959(L_8, L_9, NULL);
 		if (!L_10)
 		{
@@ -4584,8 +4773,8 @@ IL_000d:
 		}
 	}
 	{
-		float* L_11 = __this->fag3();
-		float L_12 = (&V_0)->fg3();
+		float* L_11 = __this->fag4();
+		float L_12 = (&V_0)->fg4();
 		bool L_13 = m2110115959(L_11, L_12, NULL);
 		G_B7_0 = ((int32_t)(L_13));
 		goto IL_006e;
@@ -4599,6 +4788,47 @@ IL_006d:
 IL_006e:
 	{
 		return (bool)G_B7_0;
+	}
+}
+extern "C"  t1891715979  m3077481361 (Il2CppObject * __this , t1891715979  p0, t1891715979  p1, const MethodInfo* method)
+{
+	{
+		float L_0 = (&p0)->fg4();
+		float L_1 = (&p1)->fg1();
+		float L_2 = (&p0)->fg1();
+		float L_3 = (&p1)->fg4();
+		float L_4 = (&p0)->fg2();
+		float L_5 = (&p1)->fg3();
+		float L_6 = (&p0)->fg3();
+		float L_7 = (&p1)->fg2();
+		float L_8 = (&p0)->fg4();
+		float L_9 = (&p1)->fg2();
+		float L_10 = (&p0)->fg2();
+		float L_11 = (&p1)->fg4();
+		float L_12 = (&p0)->fg3();
+		float L_13 = (&p1)->fg1();
+		float L_14 = (&p0)->fg1();
+		float L_15 = (&p1)->fg3();
+		float L_16 = (&p0)->fg4();
+		float L_17 = (&p1)->fg3();
+		float L_18 = (&p0)->fg3();
+		float L_19 = (&p1)->fg4();
+		float L_20 = (&p0)->fg1();
+		float L_21 = (&p1)->fg2();
+		float L_22 = (&p0)->fg2();
+		float L_23 = (&p1)->fg1();
+		float L_24 = (&p0)->fg4();
+		float L_25 = (&p1)->fg4();
+		float L_26 = (&p0)->fg1();
+		float L_27 = (&p1)->fg1();
+		float L_28 = (&p0)->fg2();
+		float L_29 = (&p1)->fg2();
+		float L_30 = (&p0)->fg3();
+		float L_31 = (&p1)->fg3();
+		t1891715979  L_32;
+		memset(&L_32, 0, sizeof(L_32));
+		m1100844011(&L_32, ((float)((float)((float)((float)((float)((float)((float)((float)L_0*(float)L_1))+(float)((float)((float)L_2*(float)L_3))))+(float)((float)((float)L_4*(float)L_5))))-(float)((float)((float)L_6*(float)L_7)))), ((float)((float)((float)((float)((float)((float)((float)((float)L_8*(float)L_9))+(float)((float)((float)L_10*(float)L_11))))+(float)((float)((float)L_12*(float)L_13))))-(float)((float)((float)L_14*(float)L_15)))), ((float)((float)((float)((float)((float)((float)((float)((float)L_16*(float)L_17))+(float)((float)((float)L_18*(float)L_19))))+(float)((float)((float)L_20*(float)L_21))))-(float)((float)((float)L_22*(float)L_23)))), ((float)((float)((float)((float)((float)((float)((float)((float)L_24*(float)L_25))-(float)((float)((float)L_26*(float)L_27))))-(float)((float)((float)L_28*(float)L_29))))-(float)((float)((float)L_30*(float)L_31)))), NULL);
+		return L_32;
 	}
 }
 extern "C"  t3525329789  m3771288979 (Il2CppObject * __this , t1891715979  p0, t3525329789  p1, const MethodInfo* method)
@@ -4618,37 +4848,37 @@ extern "C"  t3525329789  m3771288979 (Il2CppObject * __this , t1891715979  p0, t
 	t3525329789  V_12;
 	memset(&V_12, 0, sizeof(V_12));
 	{
-		float L_0 = (&p0)->fg0();
+		float L_0 = (&p0)->fg1();
 		V_0 = ((float)((float)L_0*(float)(2.0f)));
-		float L_1 = (&p0)->fg1();
+		float L_1 = (&p0)->fg2();
 		V_1 = ((float)((float)L_1*(float)(2.0f)));
-		float L_2 = (&p0)->fg2();
+		float L_2 = (&p0)->fg3();
 		V_2 = ((float)((float)L_2*(float)(2.0f)));
-		float L_3 = (&p0)->fg0();
+		float L_3 = (&p0)->fg1();
 		float L_4 = V_0;
 		V_3 = ((float)((float)L_3*(float)L_4));
-		float L_5 = (&p0)->fg1();
+		float L_5 = (&p0)->fg2();
 		float L_6 = V_1;
 		V_4 = ((float)((float)L_5*(float)L_6));
-		float L_7 = (&p0)->fg2();
+		float L_7 = (&p0)->fg3();
 		float L_8 = V_2;
 		V_5 = ((float)((float)L_7*(float)L_8));
-		float L_9 = (&p0)->fg0();
+		float L_9 = (&p0)->fg1();
 		float L_10 = V_1;
 		V_6 = ((float)((float)L_9*(float)L_10));
-		float L_11 = (&p0)->fg0();
+		float L_11 = (&p0)->fg1();
 		float L_12 = V_2;
 		V_7 = ((float)((float)L_11*(float)L_12));
-		float L_13 = (&p0)->fg1();
+		float L_13 = (&p0)->fg2();
 		float L_14 = V_2;
 		V_8 = ((float)((float)L_13*(float)L_14));
-		float L_15 = (&p0)->fg3();
+		float L_15 = (&p0)->fg4();
 		float L_16 = V_0;
 		V_9 = ((float)((float)L_15*(float)L_16));
-		float L_17 = (&p0)->fg3();
+		float L_17 = (&p0)->fg4();
 		float L_18 = V_1;
 		V_10 = ((float)((float)L_17*(float)L_18));
-		float L_19 = (&p0)->fg3();
+		float L_19 = (&p0)->fg4();
 		float L_20 = V_2;
 		V_11 = ((float)((float)L_19*(float)L_20));
 		float L_21 = V_4;
@@ -4697,25 +4927,25 @@ extern "C"  bool m4197259746 (Il2CppObject * __this , t1891715979  p0, t18917159
 // Conversion methods for marshalling of: UnityEngine.Quaternion
 extern "C" void t1891715979_marshal(const t1891715979& unmarshaled, t1891715979_marshaled& marshaled)
 {
-	marshaled.f0 = unmarshaled.fg0();
 	marshaled.f1 = unmarshaled.fg1();
 	marshaled.f2 = unmarshaled.fg2();
 	marshaled.f3 = unmarshaled.fg3();
+	marshaled.f4 = unmarshaled.fg4();
 }
 extern "C" void t1891715979_marshal_back(const t1891715979_marshaled& marshaled, t1891715979& unmarshaled)
 {
 	float unmarshaled_x_temp = 0.0f;
-	unmarshaled_x_temp = marshaled.f0;
-	unmarshaled.fs0(unmarshaled_x_temp);
+	unmarshaled_x_temp = marshaled.f1;
+	unmarshaled.fs1(unmarshaled_x_temp);
 	float unmarshaled_y_temp = 0.0f;
-	unmarshaled_y_temp = marshaled.f1;
-	unmarshaled.fs1(unmarshaled_y_temp);
+	unmarshaled_y_temp = marshaled.f2;
+	unmarshaled.fs2(unmarshaled_y_temp);
 	float unmarshaled_z_temp = 0.0f;
-	unmarshaled_z_temp = marshaled.f2;
-	unmarshaled.fs2(unmarshaled_z_temp);
+	unmarshaled_z_temp = marshaled.f3;
+	unmarshaled.fs3(unmarshaled_z_temp);
 	float unmarshaled_w_temp = 0.0f;
-	unmarshaled_w_temp = marshaled.f3;
-	unmarshaled.fs3(unmarshaled_w_temp);
+	unmarshaled_w_temp = marshaled.f4;
+	unmarshaled.fs4(unmarshaled_w_temp);
 }
 // Conversion method for clean up from marshalling of: UnityEngine.Quaternion
 extern "C" void t1891715979_marshal_cleanup(t1891715979_marshaled& marshaled)
@@ -7110,6 +7340,14 @@ extern "C"  t3525329788  m2060823533 (Il2CppObject * __this , t3525329788  p0, c
 		return L_2;
 	}
 }
+extern "C"  void m1012580896 (t1092684080 * __this, t1886596500 * p0, const MethodInfo* method)
+{
+	typedef void (*m1012580896_ftn) (t1092684080 *, t1886596500 *);
+	static m1012580896_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m1012580896_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::set_material(UnityEngine.Material)");
+	_il2cpp_icall_func(__this, p0);
+}
 extern "C"  int32_t m1954594923 (t1092684080 * __this, const MethodInfo* method)
 {
 	typedef int32_t (*m1954594923_ftn) (t1092684080 *);
@@ -7177,6 +7415,25 @@ extern "C"  t3878351788 * m670320982 (t2256525006 * __this, const MethodInfo* me
 	{
 		String_t* L_0 = __this->fg1();
 		Type_t * L_1 = __this->fg2();
+		t3878351788 * L_2 = m3601699608(NULL, L_0, L_1, NULL);
+		return L_2;
+	}
+}
+extern const Il2CppType* t3878351788_0_0_0_var;
+extern TypeInfo* Type_t_TI_var;
+extern const uint32_t m2187391845_MetadataUsageId;
+extern "C"  t3878351788 * m2187391845 (Il2CppObject * __this , String_t* p0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		il2cpp_codegen_initialize_method (m2187391845_MetadataUsageId);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		String_t* L_0 = p0;
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_TI_var);
+		Type_t * L_1 = m3806905434(NULL, LoadTypeToken(t3878351788_0_0_0_var), NULL);
 		t3878351788 * L_2 = m3601699608(NULL, L_0, L_1, NULL);
 		return L_2;
 	}
@@ -11002,6 +11259,17 @@ extern "C"  void m221305727 (t284553113 * __this, t3525329789 * p0, const Method
 	_il2cpp_icall_func = (m221305727_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::INTERNAL_set_localPosition(UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, p0);
 }
+extern "C"  t3525329789  m1058084741 (t284553113 * __this, const MethodInfo* method)
+{
+	t1891715979  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		t1891715979  L_0 = m11483428(__this, NULL);
+		V_0 = L_0;
+		t3525329789  L_1 = m997303795((&V_0), NULL);
+		return L_1;
+	}
+}
 extern "C"  t3525329789  m877665793 (t284553113 * __this, const MethodInfo* method)
 {
 	{
@@ -11021,12 +11289,27 @@ extern "C"  t1891715979  m11483428 (t284553113 * __this, const MethodInfo* metho
 		return L_0;
 	}
 }
+extern "C"  void m1525803229 (t284553113 * __this, t1891715979  p0, const MethodInfo* method)
+{
+	{
+		m2051942009(__this, (&p0), NULL);
+		return;
+	}
+}
 extern "C"  void m2389720173 (t284553113 * __this, t1891715979 * p0, const MethodInfo* method)
 {
 	typedef void (*m2389720173_ftn) (t284553113 *, t1891715979 *);
 	static m2389720173_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (m2389720173_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::INTERNAL_get_rotation(UnityEngine.Quaternion&)");
+	_il2cpp_icall_func(__this, p0);
+}
+extern "C"  void m2051942009 (t284553113 * __this, t1891715979 * p0, const MethodInfo* method)
+{
+	typedef void (*m2051942009_ftn) (t284553113 *, t1891715979 *);
+	static m2051942009_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (m2051942009_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::INTERNAL_set_rotation(UnityEngine.Quaternion&)");
 	_il2cpp_icall_func(__this, p0);
 }
 extern "C"  t1891715979  m3343229381 (t284553113 * __this, const MethodInfo* method)
@@ -11283,49 +11566,6 @@ extern "C"  t284553113 * m4040462992 (t284553113 * __this, int32_t p0, const Met
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (m4040462992_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::GetChild(System.Int32)");
 	return _il2cpp_icall_func(__this, p0);
-}
-extern "C"  void m856668951 (t1072804841 * __this, t284553113 * p0, const MethodInfo* method)
-{
-	{
-		__this->fs1((-1));
-		m1772956182(__this, NULL);
-		t284553113 * L_0 = p0;
-		__this->fs0(L_0);
-		return;
-	}
-}
-extern "C"  Il2CppObject * m1838268607 (t1072804841 * __this, const MethodInfo* method)
-{
-	{
-		t284553113 * L_0 = __this->fg0();
-		int32_t L_1 = __this->fg1();
-		t284553113 * L_2 = m4040462992(L_0, L_1, NULL);
-		return L_2;
-	}
-}
-extern "C"  bool m1095530856 (t1072804841 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	{
-		t284553113 * L_0 = __this->fg0();
-		int32_t L_1 = m2107810675(L_0, NULL);
-		V_0 = L_1;
-		int32_t L_2 = __this->fg1();
-		int32_t L_3 = ((int32_t)((int32_t)L_2+(int32_t)1));
-		V_1 = L_3;
-		__this->fs1(L_3);
-		int32_t L_4 = V_1;
-		int32_t L_5 = V_0;
-		return (bool)((((int32_t)L_4) < ((int32_t)L_5))? 1 : 0);
-	}
-}
-extern "C"  void m258411155 (t1072804841 * __this, const MethodInfo* method)
-{
-	{
-		__this->fs1((-1));
-		return;
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
