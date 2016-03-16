@@ -55,7 +55,14 @@ public class Development : MonoBehaviour
 //			thePlatform = "Standalone os x";
 			
 			break;
-			
+
+		case RuntimePlatform.WebGLPlayer:
+			debugMessage ("Running in WebGLPlayer", 5.0f);
+			//			thePlatform = "Standalone os x";
+
+			break;
+
+
 			
 			
 		}

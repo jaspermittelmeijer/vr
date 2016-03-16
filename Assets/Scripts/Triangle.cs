@@ -4,7 +4,7 @@ using System.Collections;
 public class Triangle
 {
 
-	// class to hold a more intelligent triangle
+	// class to work with triangles
 
 	int[] ind;
 	Vector3[] verticeReference;
@@ -23,12 +23,42 @@ public class Triangle
 		verticeReference = _verticeReference;
 		triangleReference = _triangleReference;
 
-//		connectedTriangles = new int[3];
-
-//		updateConnectedTriangles ();
 
 
 	}
+
+
+
+
+	public Triangle ()
+	{
+
+
+	}
+
+
+
+
+	public int[] getConnectedTrianglesFor (int triangleIndex, int[] triangleData){
+		// get connected triangles for the triangle at the passed index
+//		Debug.Log ("Checkpoint 2 passed");
+		ind = new int[3];
+
+
+
+		ind [0] = triangleData[triangleIndex*3+0];
+		ind [1] = triangleData[triangleIndex*3+1];
+		ind [2] = triangleData[triangleIndex*3+2];
+//
+		triangleReference = triangleData;
+
+		return getConnectedTriangles ();
+	}
+
+
+
+
+
 
 	public int[] getConnectedTriangles ()
 	{
@@ -85,7 +115,7 @@ public class Triangle
 		bool bool02 = vectorsClockwise (pc - pb, pd - pb);
 		bool bool03 = vectorsClockwise (pa - pc, pd - pc);
 
-		Debug.Log (bool01 + " " + bool02 + " " + bool03);
+//		Debug.Log (bool01 + " " + bool02 + " " + bool03);
 
 // Check if ac is clockwise from ab or not
 

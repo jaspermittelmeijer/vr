@@ -11,8 +11,12 @@ public class Delauney
 //	Vector2[] edgeData;
 	int[] triangleData;
 	Triangle[] triangles;
+	private Triangle triangleMethods;
+
 	Point[] points;
 	int triangleIndex;
+	ArrayList  flipStack;
+
 
 	public Delauney ()
 	{
@@ -20,12 +24,14 @@ public class Delauney
 
 	}
 
-	public IEnumerator createDelauney (int numberOfVertices, float dimensions)
+	public void createDelauney (int numberOfVertices, float dimensions, RandomTerrain terrainWrapper)
 	{
 
 
 //		int numberOfVertices = 10;
-		
+		triangleMethods = new Triangle ();
+
+
 		
 		verticeData = new Vector3[numberOfVertices + 1];
 		
@@ -41,10 +47,12 @@ public class Delauney
 		float x, y, z;
 		
 		for (int i=0; i<3; i++) {
-			x = -0.5f * dimensions + Random.value * dimensions;
-			y = Random.value * 50.0f;
-			z = -0.5f * dimensions + Random.value * dimensions;
+			x =  Random.value * dimensions;
+//			y = Random.value * 50.0f;
+			z = Random.value * dimensions;
 			//			Debug.Log (x +" "+z);
+			y= terrainWrapper.getHeight(x,z);
+
 			verticeData [i] = new Vector3 (x, y, z);
 			
 			
@@ -59,24 +67,31 @@ public class Delauney
 		
 		// Set up the initial triangle for delauney
 		addTriangle (0, 1, 2, 0);
-		
+
+//		triangleMethods.getConnectedTrianglesFor (0);
+
 		// Now start adding points, and add triangles as we go
 		
 		int n = 3;
-		triangleIndex = 3;
-		
+		triangleIndex = 1;//3
+		flipStack = new ArrayList ();
+
 		
 		while (n<numberOfVertices) {
 
-			yield return new WaitForSeconds (0.05f);
+//			yield return new WaitForSeconds (0.05f);
 
 
 
 
 			// Create a vertice
-			x = -0.5f * dimensions + Random.value * dimensions;
-			y = Random.value * 50.0f;
-			z = -0.5f * dimensions + Random.value * dimensions;
+			x = Random.value * dimensions;
+//			y = Random.value * 50.0f;
+
+			z = Random.value * dimensions;
+			y= terrainWrapper.getHeight(x,z);
+
+
 			verticeData [n] = new Vector3 (x, y, z);
 			
 			
@@ -101,18 +116,18 @@ public class Delauney
 //				GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugPoint (verticeData [n], new Color (1.0f, 1.0f, 1.0f), 1.0f);
 //				debugObject.GetComponent <VisualDebug> ().addDebugPoint (newVertices [n], new Color (1.0f, 1.0f, 1.0f), 1.0f);
 				
-				for (int ti=0; ti<triangleIndex; ti += 3) {
+				for (int ti=0; ti<triangleIndex; ti ++) {
 					
-					int ti0 = triangleData [ti + 0];
-					int ti1 = triangleData [ti + 1];
-					int ti2 = triangleData [ti + 2];
+					int ti0 = triangleData [ti *3  + 0];
+					int ti1 = triangleData [ti *3 + 1];
+					int ti2 = triangleData [ti *3 + 2];
 					
 					Triangle testTriangle = new Triangle (ti0, ti1, ti2, verticeData, triangleData);
-					int[] connected = testTriangle.getConnectedTriangles ();
+//					int[] connected = testTriangle.getConnectedTriangles ();
 
 					
 					if (testTriangle.pointWithinBounds (n)) {
-						Debug.Log ("Point is in this triangle: " + ti / 3);
+						Debug.Log ("Point is in this triangle: " + ti );
 						//						debugObject.GetComponent <VisualDebug> ().addDebugPoint (newVertices [ti0], new Color (1.0f, 1.0f, 1.0f), 3.0f);
 						//						debugObject.GetComponent <VisualDebug> ().addDebugPoint (newVertices [ti1], new Color (1.0f, 1.0f, 1.0f), 2.0f);
 						//						debugObject.GetComponent <VisualDebug> ().addDebugPoint (newVertices [ti2], new Color (1.0f, 1.0f, 1.0f), 1.0f);
@@ -121,16 +136,20 @@ public class Delauney
 						// We found the triangle our point is in. Now we need to delete that triangle and create 3 new ones.
 						
 						addTriangle (ti0, ti1, n, ti); // replace the triangle the new point is in
-						
+
+						addToFlipStack( ti);
+
 						addTriangle (ti1, ti2, n, triangleIndex); // add a triangle
-						triangleIndex += 3;
+						addToFlipStack(triangleIndex);
+						triangleIndex ++;
 						
 						addTriangle (ti2, ti0, n, triangleIndex); // add another triangle
-						triangleIndex += 3;
+						addToFlipStack(triangleIndex);
+						triangleIndex ++;
 						
 						break; // we found our triangle and can break the loop
 					} else {
-						Debug.Log ("Point is not in this triangle: " + ti / 3);
+//						Debug.Log ("Point is not in this triangle: " + ti );
 					}
 				}
 			} else {
@@ -156,7 +175,9 @@ public class Delauney
 //					Debug.Log ("next: " + next);
 					
 					addTriangle (current, next, n, triangleIndex);
-					triangleIndex += 3;
+					addToFlipStack(triangleIndex);
+
+					triangleIndex ++;
 					current = next;
 				}
 				
@@ -164,7 +185,12 @@ public class Delauney
 			n++;
 
 			// now  flip all traingles untill it's a perfect delauney. Note that this is very brute force. It would be better to establish which triangles have been affected and keep recursively flipping just those.
-			while (flipAllTriangles());
+//			while (	flipAllTriangles());
+//			flipAllTriangles();
+			if (flipStack.Count > 0) {
+				while (flipFlipStack ())
+					;
+			}
 
 
 
@@ -276,10 +302,10 @@ public class Delauney
 //		Debug.Log ("Angle b: " + angleb);
 
 		if (anglea + angleb > 180.0f) {
-			Debug.Log ("Triangles must be flipped");
+			Debug.Log ("************************************Triangles must be flipped");
 
-			addTriangle (va, vb, vc, a * 3);
-			addTriangle (va, vb, vd, b * 3);
+			addTriangle (va, vb, vc, a );
+			addTriangle (va, vb, vd, b );
 			return true;
 
 		} else {
@@ -289,18 +315,25 @@ public class Delauney
 		}
 	}
 
-	bool flipAllTriangles () {
+	public bool flipAllTriangles () {
 		// Now flip any triangles that aren't delauney
 		// Brute force: go over all of them.
 		bool flipped = false;
 		
-		for (int i=0;i<triangleIndex;i+=3){
-			Triangle checkTriangle = new Triangle (triangleData[i],triangleData[i+1],triangleData[i+2],verticeData,triangleData);
+		for (int i=0;i<triangleIndex;i++){
+
+			/*
+			Triangle checkTriangle = new Triangle (triangleData[i*3],triangleData[i*3+1],triangleData[i*3+2],verticeData,triangleData);
 			int[] getConnected = checkTriangle.getConnectedTriangles();
+*/
+			int[] getConnected = triangleMethods.getConnectedTrianglesFor(i,triangleData);
+
+
+
 			
 			for (int j=0;j<3;j++){
 				if (getConnected[j] != -1){
-					if (delauneyTest(i/3,getConnected[j])){
+					if (delauneyTest(i,getConnected[j])){
 						flipped = true;
 						break;
 					}
@@ -311,6 +344,54 @@ public class Delauney
 		
 		return flipped;
 	}
+
+	private void addToFlipStack (int a){
+		if (flipStack.IndexOf (a) == -1) {
+			flipStack.Add (a);
+		}
+	}
+
+
+	bool flipFlipStack () {
+		bool flipped = false;
+
+
+
+		int i = (int) flipStack [0];
+
+		int[] getConnected = triangleMethods.getConnectedTrianglesFor(i,triangleData);
+		flipStack.RemoveAt (0);
+
+		for (int j=0;j<3;j++){
+			if (getConnected[j] != -1){
+				// Once we have flipped triangles, it's useless to look at the other connected triangles, since our original has now changed and we don't even now if they're still connected. 
+				// That does however mean we need to stack those connected triangles because they may still be off and we wouldn't touch on them otherwise.
+
+				if (!flipped) {
+
+					if (delauneyTest (i, getConnected [j])) {
+						flipped = true;
+						// flipping the triangles may affect others
+						addToFlipStack (i);
+						addToFlipStack (j);
+
+					} 
+				} else {
+					// we have an orphaned triangle that we need to restack
+					addToFlipStack (getConnected [j]);
+				}
+			}
+		}
+
+	
+
+
+
+
+
+		return flipped;
+	}
+
 	
 	
 
@@ -318,7 +399,7 @@ public class Delauney
 	{
 		Vector3 leg1, leg2, normal;
 		
-		Debug.Log ("Added triangle: " + a + " " + b + " " + c + " at: " + i);
+		Debug.Log ("Inserted triangle: " + a + " " + b + " " + c + " at: " + i +" in a total of " + triangleIndex);
 				
 		leg1 = verticeData [b] - verticeData [a];
 		leg2 = verticeData [c] - verticeData [a];
@@ -326,18 +407,18 @@ public class Delauney
 		
 		if (normal.y >= 0.0f) {
 			//			Debug.Log ("Normal pointing up");
-			triangleData [i + 0] = a;
-			triangleData [i + 1] = b;
-			triangleData [i + 2] = c;
+			triangleData [i*3 + 0] = a;
+			triangleData [i*3 + 1] = b;
+			triangleData [i*3 + 2] = c;
 //			Triangle [i / 3] = new Triangle (a, b, c, verticeData, triangleData);
 
 
 		} else {
 			
 			//			Debug.Log ("Normal down, swapping points");
-			triangleData [i + 0] = a;
-			triangleData [i + 1] = c;
-			triangleData [i + 2] = b;
+			triangleData [i*3 + 0] = a;
+			triangleData [i*3 + 1] = c;
+			triangleData [i*3 + 2] = b;
 			//			Triangle [i / 3] = new Triangle (a, c, b, verticeData, triangleData);
 
 		}
