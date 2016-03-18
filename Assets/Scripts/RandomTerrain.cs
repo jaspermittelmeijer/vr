@@ -12,6 +12,8 @@ public class RandomTerrain
 	int[] triangles;
 	Vector3[] vertices;
 
+	VisualDebug visualDebug;
+
 	// class to generate and hold random terrain data
 
 	public RandomTerrain (float _size, int _iterations, float _amp, float _roughness)
@@ -34,24 +36,42 @@ public class RandomTerrain
 		arraySize = 1 + Mathf.FloorToInt (Mathf.Pow (2.0f, iterations));
 
 		unitSize = size / (arraySize - 1);
-//		Debug.Log ("Unitsize: " + unitSize);
 
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (0.0f,0.0f,0.0f),  0.05f);
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (0.0f,0.0f,size), 0.05f);
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (size,0.0f,0.0f),  0.05f);
-		GameObject.Find ("VisualDebug").GetComponent <VisualDebug> ().addDebugNull (new Vector3 (size,0.0f,size),0.05f);
+		visualDebug = GameObject.Find ("Root").GetComponent <World> ().getVisualDebug ();
 
 
+
+
+
+
+
+
+	}
+
+
+	public void spawn ()
+	{
+		visualDebug.addDebugNull (new Vector3 (0.0f, 0.0f, 0.0f), 0.05f);
+		visualDebug.addDebugNull (new Vector3 (0.0f, 0.0f, size), 0.05f);
+		visualDebug.addDebugNull (new Vector3 (size, 0.0f, 0.0f), 0.05f);
+		visualDebug.addDebugNull (new Vector3 (size, 0.0f, size), 0.05f);
 
 		terraindata = new float [arraySize, arraySize];
 		fillArray ();
 		generate ();
 		parseIntoMesh ();
-//		dataDump ();
-
-
+		//		dataDump ();
 	}
-	public float getHeight (float pi, float pj){
+
+
+	public void setVisualDebug (VisualDebug _visualDebug)
+	{
+		visualDebug = _visualDebug;// override the general visual debug and set it to a specific one.
+	}
+
+
+	public float getHeight (float pi, float pj)
+	{
 		// return the height at this point. we'll average out neighbouring vertices in a radius of <1, weighing them based on distance.
 		// establish where we are in the arraydata
 
@@ -59,15 +79,15 @@ public class RandomTerrain
 		int j = Mathf.FloorToInt (pj / unitSize);
 			
 		// there's a max of 4 vertices that could possibly be within range that we need to consider
-		 average =0;
-		 totalWeights = 0;
+		average = 0;
+		totalWeights = 0;
 
 
 
 		parsePoint (pi, pj, i, j);
-		parsePoint (pi, pj, i+1, j);
-		parsePoint (pi, pj, i, j+1);
-		parsePoint (pi, pj, i+1, j+1);
+		parsePoint (pi, pj, i + 1, j);
+		parsePoint (pi, pj, i, j + 1);
+		parsePoint (pi, pj, i + 1, j + 1);
 
 
 
@@ -94,9 +114,11 @@ public class RandomTerrain
 		}
 
 	}
+
 	float average, totalWeights;
 
-	private void parsePoint (float pi, float pj, int ii, int jj){
+	private void parsePoint (float pi, float pj, int ii, int jj)
+	{
 		float theDistance = getDistanceInUnits (pi, pj, ii, jj);
 
 //		Debug.Log ("Distance in units to  point " +ii+" "+jj+" : " + getDistanceInUnits (pi, pj, ii, jj));
@@ -111,7 +133,8 @@ public class RandomTerrain
 
 	}
 
-	public float getDistanceInUnits (float pi, float pj, int ii, int jj){
+	public float getDistanceInUnits (float pi, float pj, int ii, int jj)
+	{
 
 		// check if ii and jj are valid: they may go out of range
 
@@ -142,7 +165,7 @@ public class RandomTerrain
 				int currentTriangleIndex = i * (arraySize - 1) + j; 
 
 				// Add vertice.
-				vertices [currentVerticeIndex] = new Vector3 (i*unitSize, terraindata [i, j],j*unitSize);
+				vertices [currentVerticeIndex] = new Vector3 (i * unitSize, terraindata [i, j], j * unitSize);
 
 				// Add 2 triangles for every square. So that's for every vertice except the last one in a row or column.
 				if (i < arraySize - 1 && j < arraySize - 1) {
@@ -202,6 +225,8 @@ public class RandomTerrain
 
 		// now iterate at increasingly deeper levels.
 		multiplier = Mathf.Pow (2.0f, -1.0f * roughness);
+//		multiplier = 1f;
+
 		int iteration = 0;
 
 		while (iteration < iterations) {
@@ -247,7 +272,8 @@ public class RandomTerrain
 
 
 
-			multiplier = multiplier * multiplier;
+			multiplier = multiplier * Mathf.Pow (2.0f, -1.0f * roughness);
+			;
 
 
 			iteration++;

@@ -1,35 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VisualDebug: MonoBehaviour
+public class VisualDebug
 {
 
-	public GameObject target;
+	GameObject dSelf;
 	Material mat;
 
-	void Start ()
-	{
+	public VisualDebug (GameObject parent){
+		dSelf = new GameObject ("Visual Debug");
+		dSelf.transform.parent = parent.transform;
 
-//		mat = Resources.Load ("DarkGrey") as Material;
-//		Debug.Log ("loaded");
-
-
-
-
-//		addDebugPoint (new Vector3 (50.0f, 0.0f, 0.0f), new Color (1.0f, 1.0f, 1.0f));
 
 	}
 
-	void Update ()
-	{
-	}
+
+//	void Start ()
+//	{
+//
+////		mat = Resources.Load ("DarkGrey") as Material;
+////		Debug.Log ("loaded");
+//
+//
+//
+//
+////		addDebugPoint (new Vector3 (50.0f, 0.0f, 0.0f), new Color (1.0f, 1.0f, 1.0f));
+//
+//	}
+//
+//	void Update ()
+//	{
+//	}
 
 
 	public GameObject addDebugPoint (Vector3 point, Color color, float scaling)
 	{
 
 		GameObject visualDebugPoint = new GameObject ("Debugpoint 01");
-		visualDebugPoint.transform.parent = transform;
+		visualDebugPoint.transform.parent = dSelf.transform;
 		visualDebugPoint.transform.position = point;
 
 
@@ -99,7 +107,7 @@ public class VisualDebug: MonoBehaviour
 	{
 
 		GameObject visualDebugPoint = new GameObject ("Debugnull 01");
-		visualDebugPoint.transform.parent = transform;
+		visualDebugPoint.transform.parent = dSelf.transform;
 		visualDebugPoint.transform.position = point;
 
 
